@@ -66,6 +66,8 @@ Plugin 'tpope/vim-characterize'
 Plugin 'tpope/vim-dispatch'
 Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-fugitive'
+Plugin 'kablamo/vim-git-log'
+Plugin 'int3/vim-extradite'
 Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-rails'
@@ -410,6 +412,19 @@ let g:SuperTabDefaultCompletionType = "<c-x><c-u>"
 " easy-align
 vmap <Enter> <Plug>(EasyAlign)
 nmap <Leader>a <Plug>(EasyAlign)
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" movement in wrapped lines
+vmap <D-j> gj
+vmap <D-k> gk
+vmap <D-4> g$
+vmap <D-6> g^
+vmap <D-0> g^
+nmap <D-j> gj
+nmap <D-k> gk
+nmap <D-4> g$
+nmap <D-6> g^
+nmap <D-0> g^
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-pasta
