@@ -21,6 +21,8 @@
   cl = clone
   ci = commit
   co = checkout
+  com = checkout master
+  cb = checkout -
   br = branch
   diff = diff --word-diff
   wdiff = diff --color-words
@@ -57,6 +59,11 @@
   sa = stash apply
   ss = stash save
   pushall = push --recurse-submodules=on-demand
+  rb = rebase
+  rbi = rebase -i
+  rbc = rebase --continue
+  rba = rebase --abort
+  rbm = rebase master
 [merge]
 	tool = opendiff
 	conflictstyle = diff3
