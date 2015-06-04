@@ -167,3 +167,7 @@ export JRUBY_OPTS="--2.0"
 
 # export MC_SKIN=$HOME/.mc/solarized.ini
 
+# Git branch name
+gbn () {
+   git branch 2> /dev/null | sed -e '/^[^*]/d' -e 's/* \(.*\)/ \1/'
+}
