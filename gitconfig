@@ -20,6 +20,7 @@
   s  = status -s
   cl = clone
   ci = commit
+  cia = commit --amend
   co = checkout
   com = checkout master
   cb = checkout -
