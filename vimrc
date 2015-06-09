@@ -82,6 +82,7 @@ Plugin 'vim-scripts/indenthtml.vim'
 Plugin 'heartsentwined/vim-emblem'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'lukaszkorecki/CoffeeTags'
+Plugin 'reedes/vim-wordy'
 
 call vundle#end()
 " Swap/backup files
