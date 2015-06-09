@@ -63,6 +63,8 @@
   rbc = rebase --continue
   rba = rebase --abort
   rbm = rebase master
+  fe = fetch
+  pu = pull
 [merge]
 	tool = opendiff
 	conflictstyle = diff3
