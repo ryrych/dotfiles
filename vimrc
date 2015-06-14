@@ -286,6 +286,7 @@ augroup END
 augroup Text
   au!
   au FileType text,markdown setlocal textwidth=80 formatoptions+=1
+  au FileType text,markdown setlocal wrap linebreak
   au FileType text,markdown,gitcommit setlocal complete+=k infercase
   au FileType text,markdown,gitcommit setlocal isk-=-
 
