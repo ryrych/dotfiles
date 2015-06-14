@@ -81,6 +81,7 @@ Plugin 'vim-scripts/indenthtml.vim'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'reedes/vim-wordy'
 Plugin 'wikitopian/hardmode'
+Plugin 'reedes/vim-textobj-quote'
 
 call vundle#end()
 " Swap/backup files
@@ -198,6 +199,17 @@ augroup TrailingSpaces
   au!
   au BufWritePre * if &ft != "markdown" | let b:cpos = [line("."), col(".")] | %s/\s\+$//e | call cursor(b:cpos) | endif
 augroup END
+
+augroup textobj_quote
+  au!
+  au FileType markdown call textobj#quote#init()
+  au FileType textile call textobj#quote#init()
+  au FileType text call textobj#quote#init({'educate': 0})
+augroup END
+
+map <silent> <leader>qc <Plug>ReplaceWithCurly
+map <silent> <leader>qs <Plug>ReplaceWithStraight
+nnoremap <silent> <leader>qpl :call textobj#quote#init({ 'double':'„“', 'single':'‚‘' })<cr>
 
 " Disable hjkl to be more pr0 ;) (https://github.com/wikitopian/hardmode)
 augroup HardMode
