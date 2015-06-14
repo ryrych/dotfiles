@@ -293,7 +293,7 @@ augroup Text
   au FileType markdown setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 
   " Support for the Markdown Viewer: https://github.com/szw/md
-  au FileType markdown command! -buffer -nargs=0 Md :silent! :exe '! md "' . expand('%:p') . '"' | redraw!
+  au FileType markdown command! -buffer -nargs=0 Md :silent! :exe '! ~/.local/bin/md "' . expand('%:p') . '"' | redraw!
   au FileType markdown nnoremap <silent><buffer><F1> :Md<CR>
 augroup END
 
