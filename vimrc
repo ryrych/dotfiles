@@ -80,6 +80,7 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'vim-scripts/indenthtml.vim'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'reedes/vim-wordy'
+Plugin 'wikitopian/hardmode'
 
 call vundle#end()
 " Swap/backup files
@@ -197,6 +198,14 @@ augroup TrailingSpaces
   au!
   au BufWritePre * if &ft != "markdown" | let b:cpos = [line("."), col(".")] | %s/\s\+$//e | call cursor(b:cpos) | endif
 augroup END
+
+" Disable hjkl to be more pr0 ;) (https://github.com/wikitopian/hardmode)
+augroup HardMode
+  au!
+  au VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+augroup END
+
+nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
 
 " Mute highlight search
 nnoremap <silent><C-l> :<C-u>nohlsearch<CR><C-l>
