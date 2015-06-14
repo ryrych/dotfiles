@@ -17,6 +17,7 @@ set statusline=%<%f%(\ %y%m%r%)%(\ %{fugitive#statusline()}%)%=%(\ %{CtrlSpaceSt
 set showtabline=0
 set nostartofline
 set noautochdir
+set colorcolumn=+1
 
 " Vundle
 filetype off
