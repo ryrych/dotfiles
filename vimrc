@@ -461,3 +461,25 @@ nnoremap <silent><F2> :ConqueTerm tmux -2u<CR>
 " vim-tags
 " turn off autogenerating until bug with hanging process is fixed
 let g:vim_tags_auto_generate = 0
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" inline-to-reference urls in markdown (http://www.drbunsen.org/markdown-formatting/)
+
+function! Formd(option)
+    :let save_view = winsaveview()
+    :let flag = a:option
+    :if flag == "-r"
+        :%! ~/.local/bin/formd -r
+    :elseif flag == "-i"
+        :%! ~/.local/bin/formd -i
+    :else
+        :%! ~/.local/bin/formd -f
+    :endif
+    :call winrestview(save_view)
+endfunction
+
+" formd mappings
+
+nmap <leader>fr :call Formd("-r")<CR>
+nmap <leader>fi :call Formd("-i")<CR>
+nmap <leader>f :call Formd("-f")<CR>
