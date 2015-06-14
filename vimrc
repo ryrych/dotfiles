@@ -209,14 +209,6 @@ augroup END
 
 " Custom filetype settings
 
-augroup PHP
-  au!
-  au FileType php setlocal omnifunc=phpcomplete#CompletePHP
-  au FileType php setlocal tabstop=4 shiftwidth=4 noexpandtab
-  " au FileType php,html filetype indent off
-  " au FileType php au InsertLeave * pclose
-augroup END
-
 augroup Ruby
   au!
   au FileType ruby,eruby,haml setlocal omnifunc=rubycomplete#Complete
