@@ -17,6 +17,7 @@ set statusline=%<%f%(\ %y%m%r%)%(\ %{fugitive#statusline()}%)%=%(\ %{CtrlSpaceSt
 set showtabline=0
 set nostartofline
 set noautochdir
+set colorcolumn=+1
 
 " Vundle
 filetype off
@@ -30,7 +31,6 @@ Plugin 'Lokaltog/vim-easymotion'
 Plugin 'Raimondi/delimitMate'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'altercation/vim-colors-solarized'
-Plugin 'elixir-lang/vim-elixir'
 Plugin 'ervandew/supertab'
 Plugin 'glts/vim-textobj-comment'
 Plugin 'jgdavey/vim-blockle'
@@ -48,7 +48,6 @@ Plugin 'pangloss/vim-javascript'
 Plugin 'rking/ag.vim'
 Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
-Plugin 'shawncplus/phpcomplete.vim'
 Plugin 'sickill/vim-pasta'
 Plugin 'szw/vim-commentary'
 Plugin 'szw/vim-ctrlspace'
@@ -79,10 +78,10 @@ Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
 Plugin 'vim-ruby/vim-ruby'
 Plugin 'vim-scripts/indenthtml.vim'
-Plugin 'heartsentwined/vim-emblem'
 Plugin 'mustache/vim-mustache-handlebars'
-Plugin 'lukaszkorecki/CoffeeTags'
 Plugin 'reedes/vim-wordy'
+Plugin 'wikitopian/hardmode'
+Plugin 'reedes/vim-textobj-quote'
 
 call vundle#end()
 " Swap/backup files
@@ -201,6 +200,25 @@ augroup TrailingSpaces
   au BufWritePre * if &ft != "markdown" | let b:cpos = [line("."), col(".")] | %s/\s\+$//e | call cursor(b:cpos) | endif
 augroup END
 
+augroup textobj_quote
+  au!
+  au FileType markdown call textobj#quote#init()
+  au FileType textile call textobj#quote#init()
+  au FileType text call textobj#quote#init({'educate': 0})
+augroup END
+
+map <silent> <leader>qc <Plug>ReplaceWithCurly
+map <silent> <leader>qs <Plug>ReplaceWithStraight
+nnoremap <silent> <leader>qpl :call textobj#quote#init({ 'double':'„“', 'single':'‚‘' })<cr>
+
+" Disable hjkl to be more pr0 ;) (https://github.com/wikitopian/hardmode)
+augroup HardMode
+  au!
+  au VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+augroup END
+
+nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
+
 " Mute highlight search
 nnoremap <silent><C-l> :<C-u>nohlsearch<CR><C-l>
 
@@ -211,14 +229,6 @@ augroup LispyIdentifiers
 augroup END
 
 " Custom filetype settings
-
-augroup PHP
-  au!
-  au FileType php setlocal omnifunc=phpcomplete#CompletePHP
-  au FileType php setlocal tabstop=4 shiftwidth=4 noexpandtab
-  " au FileType php,html filetype indent off
-  " au FileType php au InsertLeave * pclose
-augroup END
 
 augroup Ruby
   au!
@@ -285,13 +295,14 @@ augroup END
 augroup Text
   au!
   au FileType text,markdown setlocal textwidth=80 formatoptions+=1
+  au FileType text,markdown setlocal wrap linebreak
   au FileType text,markdown,gitcommit setlocal complete+=k infercase
   au FileType text,markdown,gitcommit setlocal isk-=-
 
   au FileType markdown setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 
   " Support for the Markdown Viewer: https://github.com/szw/md
-  au FileType markdown command! -buffer -nargs=0 Md :silent! :exe '! md "' . expand('%:p') . '"' | redraw!
+  au FileType markdown command! -buffer -nargs=0 Md :silent! :exe '! ~/.local/bin/md "' . expand('%:p') . '"' | redraw!
   au FileType markdown nnoremap <silent><buffer><F1> :Md<CR>
 augroup END
 
@@ -459,3 +470,25 @@ nnoremap <silent><F2> :ConqueTerm tmux -2u<CR>
 " vim-tags
 " turn off autogenerating until bug with hanging process is fixed
 let g:vim_tags_auto_generate = 0
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" inline-to-reference urls in markdown (http://www.drbunsen.org/markdown-formatting/)
+
+function! Formd(option)
+    :let save_view = winsaveview()
+    :let flag = a:option
+    :if flag == "-r"
+        :%! ~/.local/bin/formd -r
+    :elseif flag == "-i"
+        :%! ~/.local/bin/formd -i
+    :else
+        :%! ~/.local/bin/formd -f
+    :endif
+    :call winrestview(save_view)
+endfunction
+
+" formd mappings
+
+nmap <leader>fr :call Formd("-r")<CR>
+nmap <leader>fi :call Formd("-i")<CR>
+nmap <leader>f :call Formd("-f")<CR>
