@@ -83,6 +83,7 @@ Plugin 'reedes/vim-wordy'
 Plugin 'reedes/vim-textobj-quote'
 Plugin 'reedes/vim-wordy'
 Plugin 'reedes/vim-lexical'
+Plugin 'nelstrom/vim-qargs'
 
 call vundle#end()
 " Swap/backup files
