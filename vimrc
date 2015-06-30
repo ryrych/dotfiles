@@ -81,6 +81,8 @@ Plugin 'vim-scripts/indenthtml.vim'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'reedes/vim-wordy'
 Plugin 'reedes/vim-textobj-quote'
+Plugin 'reedes/vim-wordy'
+Plugin 'reedes/vim-lexical'
 
 call vundle#end()
 " Swap/backup files
@@ -209,6 +211,16 @@ augroup END
 map <silent> <leader>qc <Plug>ReplaceWithCurly
 map <silent> <leader>qs <Plug>ReplaceWithStraight
 nnoremap <silent> <leader>qpl :call textobj#quote#init({ 'double':'„“', 'single':'‚‘' })<cr>
+
+augroup lexical
+  au!
+  au FileType markdown,mkd call lexical#init()
+  au FileType textile call lexical#init()
+  au FileType text call lexical#init({ 'spell': 0 })
+augroup END
+
+let g:lexical#spelllang = ['en_us', 'en_gb', 'pl',]
+let g:lexical#thesaurus = ['~/.vim/thesaurus/mthesaur.txt',]
 
 " Mute highlight search
 nnoremap <silent><C-l> :<C-u>nohlsearch<CR><C-l>
