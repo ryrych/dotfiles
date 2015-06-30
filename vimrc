@@ -80,8 +80,10 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'vim-scripts/indenthtml.vim'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'reedes/vim-wordy'
-Plugin 'wikitopian/hardmode'
 Plugin 'reedes/vim-textobj-quote'
+Plugin 'reedes/vim-wordy'
+Plugin 'reedes/vim-lexical'
+Plugin 'nelstrom/vim-qargs'
 
 call vundle#end()
 " Swap/backup files
@@ -211,13 +213,15 @@ map <silent> <leader>qc <Plug>ReplaceWithCurly
 map <silent> <leader>qs <Plug>ReplaceWithStraight
 nnoremap <silent> <leader>qpl :call textobj#quote#init({ 'double':'„“', 'single':'‚‘' })<cr>
 
-" Disable hjkl to be more pr0 ;) (https://github.com/wikitopian/hardmode)
-augroup HardMode
+augroup lexical
   au!
-  au VimEnter,BufNewFile,BufReadPost * silent! call HardMode()
+  au FileType markdown,mkd call lexical#init()
+  au FileType textile call lexical#init()
+  au FileType text call lexical#init({ 'spell': 0 })
 augroup END
 
-nnoremap <leader>h <Esc>:call ToggleHardMode()<CR>
+let g:lexical#spelllang = ['en_us', 'en_gb', 'pl',]
+let g:lexical#thesaurus = ['~/.vim/thesaurus/mthesaur.txt',]
 
 " Mute highlight search
 nnoremap <silent><C-l> :<C-u>nohlsearch<CR><C-l>
