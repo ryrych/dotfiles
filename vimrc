@@ -81,7 +81,6 @@ Plugin 'vim-scripts/indenthtml.vim'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'reedes/vim-wordy'
 Plugin 'reedes/vim-textobj-quote'
-Plugin 'reedes/vim-wordy'
 Plugin 'reedes/vim-lexical'
 Plugin 'nelstrom/vim-qargs'
 
