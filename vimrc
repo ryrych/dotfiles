@@ -496,3 +496,5 @@ endfunction
 nmap <leader>fr :call Formd("-r")<CR>
 nmap <leader>fi :call Formd("-i")<CR>
 nmap <leader>f :call Formd("-f")<CR>
+
+map <leader>nc :NERDTreeFind<CR>
