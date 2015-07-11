@@ -70,6 +70,7 @@ Plugin 'int3/vim-extradite'
 Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-rake'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-rvm'
@@ -81,9 +82,9 @@ Plugin 'vim-scripts/indenthtml.vim'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'reedes/vim-wordy'
 Plugin 'reedes/vim-textobj-quote'
-Plugin 'reedes/vim-wordy'
 Plugin 'reedes/vim-lexical'
 Plugin 'nelstrom/vim-qargs'
+Plugin 'thoughtbot/vim-rspec'
 
 call vundle#end()
 " Swap/backup files
@@ -496,3 +497,5 @@ endfunction
 nmap <leader>fr :call Formd("-r")<CR>
 nmap <leader>fi :call Formd("-i")<CR>
 nmap <leader>f :call Formd("-f")<CR>
+
+map <leader>nc :NERDTreeFind<CR>
