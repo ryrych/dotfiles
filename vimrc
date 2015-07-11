@@ -70,6 +70,7 @@ Plugin 'int3/vim-extradite'
 Plugin 'tpope/vim-haml'
 Plugin 'tpope/vim-markdown'
 Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-bundler'
 Plugin 'tpope/vim-rake'
 Plugin 'tpope/vim-repeat'
 Plugin 'tpope/vim-rvm'
@@ -83,6 +84,7 @@ Plugin 'reedes/vim-wordy'
 Plugin 'reedes/vim-textobj-quote'
 Plugin 'reedes/vim-lexical'
 Plugin 'nelstrom/vim-qargs'
+Plugin 'thoughtbot/vim-rspec'
 
 call vundle#end()
 " Swap/backup files
