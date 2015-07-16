@@ -85,6 +85,7 @@ Plugin 'reedes/vim-textobj-quote'
 Plugin 'reedes/vim-lexical'
 Plugin 'nelstrom/vim-qargs'
 Plugin 'thoughtbot/vim-rspec'
+Plugin 'reedes/vim-colors-pencil'
 
 call vundle#end()
 " Swap/backup files
@@ -192,10 +193,12 @@ runtime macros/matchit.vim
 
 " Colors
 syntax enable
-set background=dark
-colorscheme solarized
-silent! hi SignColumn guibg=#022B35 ctermbg=bg
-silent! hi NonText guifg=#022B35 gui=NONE ctermfg=bg cterm=NONE
+set background=light
+" colorscheme solarized
+" colorscheme PaperColor
+colorscheme pencil
+" silent! hi SignColumn guibg=#022B35 ctermbg=bg
+" silent! hi NonText guifg=#022B35 gui=NONE ctermfg=bg cterm=NONE
 
 " Remove trailing spaces
 augroup TrailingSpaces
@@ -384,19 +387,25 @@ let g:mustache_abbreviations = 1
 " (MacVim and Console Vim under iTerm2 with Solarized Dark theme)
 
 " Based on Solarized TablineSel
-hi CtrlSpaceSelected guifg=#586e75 guibg=#eee8d5 guisp=#839496 gui=reverse,bold ctermfg=10 ctermbg=7 cterm=reverse,bold
+" hi CtrlSpaceSelected guifg=#586e75 guibg=#eee8d5 guisp=#839496 gui=reverse,bold ctermfg=10 ctermbg=7 cterm=reverse,bold
 
 " Based on Solarized Tabline/TablineFill
 " original Normal
 " hi CtrlSpaceNormal   guifg=#839496 guibg=#073642 guisp=#839496 gui=NONE ctermfg=12 ctermbg=0 cterm=NONE
 " tweaked Normal with darker background in Gui
-hi CtrlSpaceNormal   guifg=#839496 guibg=#021B25 guisp=#839496 gui=NONE ctermfg=12 ctermbg=0 cterm=NONE
+" hi CtrlSpaceNormal   guifg=#839496 guibg=#021B25 guisp=#839496 gui=NONE ctermfg=12 ctermbg=0 cterm=NONE
 
 " Based on Title
-hi CtrlSpaceSearch   guifg=#cb4b16 guibg=NONE gui=bold ctermfg=9 ctermbg=NONE term=bold cterm=bold
+" hi CtrlSpaceSearch   guifg=#cb4b16 guibg=NONE gui=bold ctermfg=9 ctermbg=NONE term=bold cterm=bold
 
 " Based on PmenuThumb
-hi CtrlSpaceStatus   guifg=#839496 guibg=#002b36 gui=reverse term=reverse cterm=reverse ctermfg=12 ctermbg=8
+" hi CtrlSpaceStatus   guifg=#839496 guibg=#002b36 gui=reverse term=reverse cterm=reverse ctermfg=12 ctermbg=8
+
+hi link CtrlSpaceSelected PMenuSel
+hi link CtrlSpaceNormal PMenu
+hi link CtrlSpaceStatus StatusLine
+hi CtrlSpaceSearch guifg=#cb4b16 guibg=NONE gui=bold ctermfg=9 ctermbg=NONE term=bold cterm=bold
+
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
