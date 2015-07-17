@@ -86,6 +86,7 @@ Plugin 'reedes/vim-lexical'
 Plugin 'nelstrom/vim-qargs'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'reedes/vim-colors-pencil'
+Plugin 'sjl/gundo.vim'
 
 call vundle#end()
 " Swap/backup files
