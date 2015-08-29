@@ -420,6 +420,10 @@ let g:html_indent_style1 = "inc"
 let g:html_indent_inctags = "html,body,head,tbody"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Gundo
+nnoremap <F5> :GundoToggle<CR>
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " expand_region
 call expand_region#custom_text_objects({
       \ 'a]' :1,
