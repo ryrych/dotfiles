@@ -307,10 +307,6 @@ augroup Text
   au FileType text,markdown,gitcommit setlocal isk-=-
 
   au FileType markdown setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
-
-  " Support for the Markdown Viewer: https://github.com/szw/md
-  au FileType markdown command! -buffer -nargs=0 Md :silent! :exe '! ~/.local/bin/md "' . expand('%:p') . '"' | redraw!
-  au FileType markdown nnoremap <silent><buffer><F1> :Md<CR>
 augroup END
 
 " Custom plugins settings
