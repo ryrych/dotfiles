@@ -383,46 +383,21 @@ let g:mustache_abbreviations = 1
 " CtrlSpace
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Colors of CtrlSpace for Solarized Dark
-" (MacVim and Console Vim under iTerm2 with Solarized Dark theme)
-
-" Based on Solarized TablineSel
-hi CtrlSpaceSelected guifg=#586e75 guibg=#eee8d5 guisp=#839496 gui=reverse,bold ctermfg=10 ctermbg=7 cterm=reverse,bold
-
-" Based on Solarized Tabline/TablineFill
-" original Normal
-" hi CtrlSpaceNormal   guifg=#839496 guibg=#073642 guisp=#839496 gui=NONE ctermfg=12 ctermbg=0 cterm=NONE
-" tweaked Normal with darker background in Gui
-hi CtrlSpaceNormal   guifg=#839496 guibg=#021B25 guisp=#839496 gui=NONE ctermfg=12 ctermbg=0 cterm=NONE
-
-" Based on Title
-hi CtrlSpaceSearch   guifg=#cb4b16 guibg=NONE gui=bold ctermfg=9 ctermbg=NONE term=bold cterm=bold
-
-" Based on PmenuThumb
-hi CtrlSpaceStatus   guifg=#839496 guibg=#002b36 gui=reverse term=reverse cterm=reverse ctermfg=12 ctermbg=8
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 if executable("ag")
+  let g:CtrlSpaceGlobCommand = 'ag -l --nocolor -g ""'
   let g:ctrlspace_glob_command = 'ag -l --nocolor -g ""'
 endif
 
-nnoremap <silent><Leader>p :CtrlSpaceGoPrevious<CR>
-nnoremap <silent><Leader>n :CtrlSpaceGoNext<CR>
-
-" let g:ctrlspace_unicode_font = 0
-" let g:ctrlspace_use_ruby_bindings = 0
-" let g:ctrlspace_max_files = 0
-" let g:ctrlspace_max_search_results = 200
-" let g:ctrlspace_save_workspace_on_exit = 1
-" let g:ctrlspace_save_workspace_on_switch = 1
-" let g:ctrlspace_load_last_workspace_on_start = 1
-" let g:ctrlspace_use_mouse_and_arrows_in_term = 1
+nnoremap <silent><Leader>p :CtrlSpaceUp<CR>
+nnoremap <silent><Leader>n :CtrlSpaceDown<CR>
 
 function! CtrlSpaceStartWindowIndicator()
-  return ctrlspace#bufnr() != -1 && t:ctrlspace_start_window == winnr() ? g:ctrlspace_symbols.ia : ""
+  return bufexists(ctrlspace#context#PluginBuffer()) && t:CtrlSpaceStartWindow == winnr() ? ctrlspace#context#Configuration().Symbols.IA . " " : ""
 endfunction
 
+let g:CtrlSpaceFileEngine = "file_engine_darwin_amd64"
+let g:CtrlSpaceSymbols = { "NTM": " ⁺" }
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SuperTab
