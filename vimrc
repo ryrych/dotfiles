@@ -86,6 +86,8 @@ Plugin 'reedes/vim-lexical'
 Plugin 'nelstrom/vim-qargs'
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'sjl/gundo.vim'
+Plugin 'plasticboy/vim-markdown'
+Plugin 'suan/vim-instant-markdown', {'rtp': 'after'}
 
 call vundle#end()
 " Swap/backup files
@@ -500,3 +502,5 @@ nmap <leader>fi :call Formd("-i")<CR>
 nmap <leader>f :call Formd("-f")<CR>
 
 map <leader>nc :NERDTreeFind<CR>
+
+let g:instant_markdown_autostart = 0
