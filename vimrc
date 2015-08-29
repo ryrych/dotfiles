@@ -28,7 +28,6 @@ call vundle#begin()
 Plugin 'gmarik/Vundle.vim'
 
 Plugin 'Lokaltog/vim-easymotion'
-Plugin 'Raimondi/delimitMate'
 Plugin 'airblade/vim-gitgutter'
 Plugin 'altercation/vim-colors-solarized'
 Plugin 'ervandew/supertab'
@@ -315,13 +314,6 @@ augroup Text
 augroup END
 
 " Custom plugins settings
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" delimitMate
-augroup DelimitMateSettings
-  au!
-  au FileType eruby,html,xml let b:delimitMate_matchpairs = "(:),[:],{:}"
-augroup END
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Syntastic
