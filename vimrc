@@ -163,7 +163,7 @@ nnoremap <silent>a @=empty(getline(".")) ? "S" : "a"<CR>
 nnoremap <silent>A @=empty(getline(".")) ? "S" : "A"<CR>
 
 " Insert datetime
-inoremap <silent><F11> <C-r>=strftime("%d-%m-%y %H:%M:%S")<CR>
+inoremap <silent><Leader>dt <C-r>=strftime("%d-%m-%y %H:%M:%S")<CR>
 
 " Encoding
 set fileencoding=utf-8
