@@ -45,7 +45,6 @@ Plugin 'nelstrom/vim-markdown-folding'
 Plugin 'oplatek/Conque-Shell'
 Plugin 'pangloss/vim-javascript'
 Plugin 'rking/ag.vim'
-Plugin 'scrooloose/nerdtree'
 Plugin 'scrooloose/syntastic'
 Plugin 'sickill/vim-pasta'
 Plugin 'szw/vim-commentary'
@@ -87,6 +86,7 @@ Plugin 'thoughtbot/vim-rspec'
 Plugin 'sjl/gundo.vim'
 Plugin 'plasticboy/vim-markdown'
 Plugin 'suan/vim-instant-markdown', {'rtp': 'after'}
+Plugin 'tpope/vim-vinegar'
 
 call vundle#end()
 " Swap/backup files
@@ -467,7 +467,5 @@ endfunction
 nmap <leader>fr :call Formd("-r")<CR>
 nmap <leader>fi :call Formd("-i")<CR>
 nmap <leader>f :call Formd("-f")<CR>
-
-map <leader>nc :NERDTreeFind<CR>
 
 let g:instant_markdown_autostart = 0
