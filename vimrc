@@ -79,13 +79,13 @@ Plugin 'vim-ruby/vim-ruby'
 Plugin 'vim-scripts/indenthtml.vim'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'reedes/vim-wordy'
-Plugin 'reedes/vim-textobj-quote'
-Plugin 'reedes/vim-lexical'
 Plugin 'nelstrom/vim-qargs'
-Plugin 'thoughtbot/vim-rspec'
-Plugin 'sjl/gundo.vim'
 Plugin 'plasticboy/vim-markdown'
+Plugin 'reedes/vim-lexical'
+Plugin 'reedes/vim-textobj-quote'
+Plugin 'sjl/gundo.vim'
 Plugin 'suan/vim-instant-markdown', {'rtp': 'after'}
+Plugin 'thoughtbot/vim-rspec'
 Plugin 'tpope/vim-vinegar'
 
 call vundle#end()
