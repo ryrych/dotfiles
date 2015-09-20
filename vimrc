@@ -428,6 +428,10 @@ let g:html_indent_inctags = "html,body,head,tbody"
 nnoremap <F5> :GundoToggle<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" Ag
+let g:agprg="/usr/local/bin/ag --vimgrep"
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " expand_region
 call expand_region#custom_text_objects({
       \ 'a]' :1,
