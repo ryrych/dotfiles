@@ -447,6 +447,11 @@ nnoremap <silent><F2> :ConqueTerm tmux -2u<CR>
 " vim-tags
 " turn off autogenerating until bug with hanging process is fixed
 let g:vim_tags_auto_generate = 0
+let g:vim_tags_ctags_binary = ctags
+let g:vim_tags_project_tags_command = "{CTAGS} -R {OPTIONS} {DIRECTORY} 2>/dev/null"
+let g:vim_tags_gems_tags_command = "{CTAGS} -R {OPTIONS} `bundle show --paths` 2>/dev/null"
+let g:vim_tags_use_vim_dispatch = 1
+let g:vim_tags_use_language_field = 1
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " inline-to-reference urls in markdown (http://www.drbunsen.org/markdown-formatting/)
