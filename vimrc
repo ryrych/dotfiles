@@ -61,7 +61,6 @@ Plugin 'terryma/vim-multiple-cursors'
 Plugin 'tpope/vim-abolish'
 Plugin 'tpope/vim-characterize'
 Plugin 'tpope/vim-dispatch'
-Plugin 'tpope/vim-endwise'
 Plugin 'tpope/vim-fugitive'
 Plugin 'kablamo/vim-git-log'
 Plugin 'int3/vim-extradite'
@@ -87,6 +86,7 @@ Plugin 'sjl/gundo.vim'
 Plugin 'suan/vim-instant-markdown', {'rtp': 'after'}
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'tpope/vim-vinegar'
+Plugin 'cohama/lexima.vim'
 
 call vundle#end()
 " Swap/backup files
