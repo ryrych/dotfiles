@@ -1,3 +1,5 @@
+set shell=/bin/zsh
+
 " General options
 set nocompatible
 set hidden
