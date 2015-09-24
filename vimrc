@@ -324,6 +324,14 @@ augroup END
 let g:ruby_indent_access_modifier_style = "indent"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
+" RSpec.vim mappings
+map <Leader>t :call RunCurrentSpecFile()<CR>
+map <Leader>s :call RunNearestSpec()<CR>
+map <Leader>l :call RunLastSpec()<CR>
+map <Leader>al :call RunAllSpecs()<CR>
+let g:rspec_runner = "os_x_iterm"
+
+""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Dict
 let g:dict_hosts = [["dict.org", ["english"]], ["dict.mova.org", ["slovnyk_en-pl", "slovnyk_pl-en"]]]
 
