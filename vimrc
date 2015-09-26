@@ -336,8 +336,8 @@ if executable("ag")
   let g:ctrlspace_glob_command = 'ag -l --nocolor -g ""'
 endif
 
-nnoremap <silent><Leader>p :CtrlSpaceUp<CR>
-nnoremap <silent><Leader>n :CtrlSpaceDown<CR>
+nnoremap <silent><Leader>p :CtrlSpaceGoUp<CR>
+nnoremap <silent><Leader>n :CtrlSpaceGoDown<CR>
 
 function! CtrlSpaceStartWindowIndicator()
   return bufexists(ctrlspace#context#PluginBuffer()) && t:CtrlSpaceStartWindow == winnr() ? ctrlspace#context#Configuration().Symbols.IA . " " : ""
