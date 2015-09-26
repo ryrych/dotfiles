@@ -210,19 +210,20 @@ augroup TrailingSpaces
   au BufWritePre * if &ft != "markdown" | let b:cpos = [line("."), col(".")] | %s/\s\+$//e | call cursor(b:cpos) | endif
 augroup END
 
-augroup textobj_quote
+augroup Text
   au!
+  au FileType markdown setlocal textwidth=80 formatoptions+=1
+  au FileType markdown setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
+  au FileType markdown setlocal wrap linebreak
+  au FileType markdown,text,gitcommit setlocal complete+=k infercase
+  au FileType markdown,text,gitcommit setlocal isk-=-
+
   au FileType markdown,text call textobj#quote#init()
   au FileType markdown,text map <silent> <leader>qc <Plug>ReplaceWithCurly
   au FileType markdown,text map <silent> <leader>qs <Plug>ReplaceWithStraight
   au FileType markdown,text nnoremap <silent> <leader>qpl :call textobj#quote#init({ 'double':'„“', 'single':'‚‘' })<cr>
-augroup END
 
-augroup lexical
-  au!
-  au FileType markdown,mkd call lexical#init()
-  au FileType textile call lexical#init()
-  au FileType text call lexical#init({ 'spell': 0 })
+  au FileType markdown call lexical#init()
 augroup END
 
 " Lispy identifiers support
@@ -275,7 +276,7 @@ augroup END
 
 augroup Text
   au!
-  au FileType text,markdown setlocal textwidth=80 formatoptions+=1
+  au FileType markdown setlocal textwidth=80 formatoptions+=1
   au FileType text,markdown setlocal wrap linebreak
   au FileType text,markdown,gitcommit setlocal complete+=k infercase
   au FileType text,markdown,gitcommit setlocal isk-=-
