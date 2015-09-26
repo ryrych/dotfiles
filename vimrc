@@ -330,7 +330,7 @@ nnoremap <silent><Leader>p :CtrlSpaceGoUp<CR>
 nnoremap <silent><Leader>n :CtrlSpaceGoDown<CR>
 
 function! CtrlSpaceStartWindowIndicator()
-  return bufexists(ctrlspace#context#PluginBuffer()) && t:CtrlSpaceStartWindow == winnr() ? ctrlspace#context#Configuration().Symbols.IA . " " : ""
+    return ctrlspace#api#BufNr() != -1 && t:CtrlSpaceStartWindow == winnr() ? ctrlspace#context#Configuration().Symbols.IA . " " : ""
 endfunction
 
 let g:CtrlSpaceFileEngine = "file_engine_darwin_amd64"
