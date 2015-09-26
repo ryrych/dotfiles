@@ -251,26 +251,6 @@ augroup Ruby
   au FileType ruby,eruby,haml Rvm
 augroup END
 
-augroup Python
-  au!
-  au FileType python setlocal omnifunc=pythoncomplete#Complete
-  au FileType python setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
-  au FileType python setlocal completeopt-=preview "turn off the preview window
-  au FileType python setlocal isk-=-
-augroup END
-
-augroup Go
-  au!
-  au FileType go setlocal completeopt-=preview "turn off the preview window
-  au FileType go setlocal isk-=-
-augroup END
-
-augroup Vimscript
-  au!
-  au FileType vim setlocal tabstop=4 softtabstop=4 shiftwidth=2 expandtab
-  au FileType vim setlocal isk-=-
-augroup END
-
 augroup Javascript
   au!
   au FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS tabstop=4 softtabstop=4 shiftwidth=4 expandtab
