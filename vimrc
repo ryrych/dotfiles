@@ -318,7 +318,6 @@ let g:mustache_abbreviations = 1
 
 " CtrlSpace
 
-
 if executable("ag")
   let g:CtrlSpaceGlobCommand = 'ag -l --nocolor -g ""'
   let g:ctrlspace_glob_command = 'ag -l --nocolor -g ""'
