@@ -316,21 +316,20 @@ nnoremap <silent><F12> :Gstatus<CR>
 let g:mustache_abbreviations = 1
 
 " CtrlSpace
+nnoremap <silent><Leader>p :CtrlSpaceGoUp<CR>
+nnoremap <silent><Leader>n :CtrlSpaceGoDown<CR>
+
+let g:CtrlSpaceFileEngine = "file_engine_darwin_amd64"
+let g:CtrlSpaceSymbols = { "NTM": " ⁺" }
 
 if executable("ag")
   let g:CtrlSpaceGlobCommand = 'ag -l --nocolor -g ""'
   let g:ctrlspace_glob_command = 'ag -l --nocolor -g ""'
 endif
 
-nnoremap <silent><Leader>p :CtrlSpaceGoUp<CR>
-nnoremap <silent><Leader>n :CtrlSpaceGoDown<CR>
-
 function! CtrlSpaceStartWindowIndicator()
     return ctrlspace#api#BufNr() != -1 && t:CtrlSpaceStartWindow == winnr() ? ctrlspace#context#Configuration().Symbols.IA . " " : ""
 endfunction
-
-let g:CtrlSpaceFileEngine = "file_engine_darwin_amd64"
-let g:CtrlSpaceSymbols = { "NTM": " ⁺" }
 
 " SuperTab
 let g:SuperTabDefaultCompletionType = "<c-x><c-u>"
