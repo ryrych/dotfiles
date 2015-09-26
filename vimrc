@@ -91,6 +91,7 @@ Plugin 'thoughtbot/vim-rspec'
 Plugin 'tpope/vim-vinegar'
 Plugin 'cohama/lexima.vim'
 Plugin 'lukaszkorecki/CoffeeTags'
+Plugin 'Raimondi/delimitMate'
 
 call vundle#end()
 " Swap/backup files
