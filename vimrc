@@ -225,9 +225,6 @@ augroup lexical
   au FileType text call lexical#init({ 'spell': 0 })
 augroup END
 
-let g:lexical#spelllang = ['en_us', 'en_gb', 'pl',]
-let g:lexical#thesaurus = ['~/.vim/thesaurus/mthesaur.txt',]
-
 " Lispy identifiers support
 augroup LispyIdentifiers
   au!
@@ -300,6 +297,10 @@ let g:rspec_runner = "os_x_iterm"
 
 " Dict
 let g:dict_hosts = [["dict.org", ["english"]], ["dict.mova.org", ["slovnyk_en-pl", "slovnyk_pl-en"]]]
+
+" vim-lexical
+let g:lexical#spelllang = ['en_us', 'en_gb', 'pl',]
+let g:lexical#thesaurus = ['~/.vim/thesaurus/mthesaur.txt',]
 
 " Tagbar
 nmap <silent><F8> :TagbarToggle<CR>
