@@ -198,8 +198,6 @@ runtime macros/matchit.vim
 syntax enable
 set background=dark
 colorscheme solarized
-silent! hi SignColumn guibg=#022B35 ctermbg=bg
-silent! hi NonText guifg=#022B35 gui=NONE ctermfg=bg cterm=NONE
 
 " Remove trailing spaces
 augroup TrailingSpaces
