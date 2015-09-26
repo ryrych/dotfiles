@@ -293,11 +293,9 @@ augroup END
 
 " Custom plugins settings
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vim-Ruby
 let g:ruby_indent_access_modifier_style = "indent"
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " RSpec.vim mappings
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
@@ -305,30 +303,23 @@ map <Leader>l :call RunLastSpec()<CR>
 map <Leader>al :call RunAllSpecs()<CR>
 let g:rspec_runner = "os_x_iterm"
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Dict
 let g:dict_hosts = [["dict.org", ["english"]], ["dict.mova.org", ["slovnyk_en-pl", "slovnyk_pl-en"]]]
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Tagbar
 nmap <silent><F8> :TagbarToggle<CR>
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Maximizer
 let g:maximizer_set_mapping_with_bang = 1
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vim-Fugitive
 nnoremap <silent><F12> :Gstatus<CR>
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Vim-Fugitive
 let g:mustache_abbreviations = 1
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " CtrlSpace
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 
 if executable("ag")
   let g:CtrlSpaceGlobCommand = 'ag -l --nocolor -g ""'
@@ -345,16 +336,13 @@ endfunction
 let g:CtrlSpaceFileEngine = "file_engine_darwin_amd64"
 let g:CtrlSpaceSymbols = { "NTM": " ⁺" }
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " SuperTab
 let g:SuperTabDefaultCompletionType = "<c-x><c-u>"
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " easy-align
 vmap <Enter> <Plug>(EasyAlign)
 nmap <Leader>a <Plug>(EasyAlign)
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " movement in wrapped lines
 vmap <D-j> gj
 vmap <D-k> gk
@@ -367,19 +355,15 @@ nmap <D-4> g$
 nmap <D-6> g^
 nmap <D-0> g^
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " vim-pasta
 let g:pasta_disabled_filetypes = ["python", "coffee", "markdown", "yaml", "slim", "haml"]
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Ctags
 nnoremap <F5> :!ctags -R --languages=ruby --exclude=.git --exclude=log . $(bundle list --paths) 2>/dev/null<CR>
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Ag
 let g:agprg="/usr/local/bin/ag --vimgrep"
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " expand_region
 call expand_region#custom_text_objects({
       \ 'a]' :1,
@@ -408,7 +392,6 @@ let g:CoffeeAutoTagFile='./coffeetags'
 let g:CoffeeAutoTagIncludeVars=1
 " let g:CoffeeAutoTagTagRelative=0
 
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " inline-to-reference urls in markdown (http://www.drbunsen.org/markdown-formatting/)
 
 function! Formd(option)
