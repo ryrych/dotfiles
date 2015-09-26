@@ -202,6 +202,8 @@ syntax enable
 set background=dark
 colorscheme solarized
 
+" Custom filetype settings
+
 " Remove trailing spaces
 augroup TrailingSpaces
   au!
@@ -234,8 +236,6 @@ augroup LispyIdentifiers
   au!
   au FileType lisp,clojure,html,xml,xhtml,haml,eruby,css,scss,sass,javascript,coffee setlocal isk+=-
 augroup END
-
-" Custom filetype settings
 
 augroup Ruby
   au!
