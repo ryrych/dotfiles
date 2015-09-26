@@ -21,6 +21,7 @@ set nostartofline
 set noautochdir
 set cursorline
 set textwidth=80
+set clipboard=unnamed
 let &colorcolumn=join(range(81,999),",")
 
 " Vundle
