@@ -151,6 +151,9 @@ nnoremap <silent> "" :registers "0123456789abcdefghijklmnopqrstuvwxyz*+.:<CR>
 " Toggle wrapping
 nnoremap <silent><Leader>w :if &wrap <bar> set nowrap <bar> else <bar> set wrap <bar> endif<CR>
 
+" Mute highlight search
+nnoremap <silent><C-l> :<C-u>nohlsearch<CR><C-l>
+
 "Improve window resizing
 nnoremap <silent><Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
 nnoremap <silent><Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
@@ -225,9 +228,6 @@ augroup END
 
 let g:lexical#spelllang = ['en_us', 'en_gb', 'pl',]
 let g:lexical#thesaurus = ['~/.vim/thesaurus/mthesaur.txt',]
-
-" Mute highlight search
-nnoremap <silent><C-l> :<C-u>nohlsearch<CR><C-l>
 
 " Lispy identifiers support
 augroup LispyIdentifiers
