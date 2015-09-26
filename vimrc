@@ -46,7 +46,6 @@ Plugin 'kchmck/vim-coffee-script'
 Plugin 'kshenoy/vim-signature'
 Plugin 'majutsushi/tagbar'
 Plugin 'nelstrom/vim-markdown-folding'
-Plugin 'oplatek/Conque-Shell'
 Plugin 'pangloss/vim-javascript'
 Plugin 'rking/ag.vim'
 Plugin 'scrooloose/syntastic'
@@ -394,10 +393,6 @@ call expand_region#custom_text_objects('ruby', {
       \ 'im' :0,
       \ 'am' :0,
       \ })
-
-" ConqueTerm
-let g:ConqueTerm_ToggleKey      = '<F7>'
-nnoremap <silent><F2> :ConqueTerm tmux -2u<CR>
 
 " vim-tags
 " turn off autogenerating until bug with hanging process is fixed
