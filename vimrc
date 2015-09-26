@@ -373,12 +373,6 @@ nmap <D-0> g^
 let g:pasta_disabled_filetypes = ["python", "coffee", "markdown", "yaml", "slim", "haml"]
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" indenthtml
-let g:html_indent_script1 = "inc"
-let g:html_indent_style1 = "inc"
-let g:html_indent_inctags = "html,body,head,tbody"
-
-""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Ctags
 nnoremap <F5> :!ctags -R --languages=ruby --exclude=.git --exclude=log . $(bundle list --paths) 2>/dev/null<CR>
 
