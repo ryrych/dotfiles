@@ -212,14 +212,11 @@ augroup END
 
 augroup textobj_quote
   au!
-  au FileType markdown call textobj#quote#init()
-  au FileType textile call textobj#quote#init()
-  au FileType text call textobj#quote#init({'educate': 0})
+  au FileType markdown,text call textobj#quote#init()
+  au FileType markdown,text map <silent> <leader>qc <Plug>ReplaceWithCurly
+  au FileType markdown,text map <silent> <leader>qs <Plug>ReplaceWithStraight
+  au FileType markdown,text nnoremap <silent> <leader>qpl :call textobj#quote#init({ 'double':'„“', 'single':'‚‘' })<cr>
 augroup END
-
-map <silent> <leader>qc <Plug>ReplaceWithCurly
-map <silent> <leader>qs <Plug>ReplaceWithStraight
-nnoremap <silent> <leader>qpl :call textobj#quote#init({ 'double':'„“', 'single':'‚‘' })<cr>
 
 augroup lexical
   au!
