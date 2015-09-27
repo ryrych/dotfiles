@@ -91,6 +91,7 @@ Plugin 'suan/vim-instant-markdown', {'rtp': 'after'}
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'tpope/vim-vinegar'
 Plugin 'cohama/lexima.vim'
+Plugin 'lukaszkorecki/CoffeeTags'
 
 call vundle#end()
 " Swap/backup files
@@ -429,8 +430,8 @@ let g:html_indent_style1 = "inc"
 let g:html_indent_inctags = "html,body,head,tbody"
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
-" Gundo
-nnoremap <F5> :GundoToggle<CR>
+" Ctags
+nnoremap <F5> :!ctags -R --languages=ruby --exclude=.git --exclude=log . $(bundle list --paths) 2>/dev/null<CR>
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " Ag
@@ -463,6 +464,11 @@ let g:vim_tags_project_tags_command = "{CTAGS} -R {OPTIONS} {DIRECTORY} 2>/dev/n
 let g:vim_tags_gems_tags_command = "{CTAGS} -R {OPTIONS} `bundle show --paths` 2>/dev/null"
 let g:vim_tags_use_vim_dispatch = 1
 let g:vim_tags_use_language_field = 1
+
+let g:CoffeeAutoTagDisabled=1
+let g:CoffeeAutoTagFile='./coffeetags'
+let g:CoffeeAutoTagIncludeVars=1
+" let g:CoffeeAutoTagTagRelative=0
 
 """"""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""""
 " inline-to-reference urls in markdown (http://www.drbunsen.org/markdown-formatting/)
