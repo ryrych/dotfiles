@@ -1,6 +1,5 @@
-set shell=/bin/zsh
-
 " General options
+set shell=/bin/zsh
 set nocompatible
 set hidden
 set smartindent autoindent
