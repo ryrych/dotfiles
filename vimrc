@@ -145,6 +145,18 @@ nnoremap <silent><Leader>f :if &fdm == "indent" <bar> setl fdm=marker <bar> else
 " Jumps
 nnoremap <silent><S-TAB> <C-o>
 
+" Movement in wrapped lines
+vmap <D-j> gj
+vmap <D-k> gk
+vmap <D-4> g$
+vmap <D-6> g^
+vmap <D-0> g^
+nmap <D-j> gj
+nmap <D-k> gk
+nmap <D-4> g$
+nmap <D-6> g^
+nmap <D-0> g^
+
 " List contents of all registers (that typically contain pasteable text).
 nnoremap <silent> "" :registers "0123456789abcdefghijklmnopqrstuvwxyz*+.:<CR>
 
@@ -341,18 +353,6 @@ let g:SuperTabDefaultCompletionType = "<c-x><c-u>"
 " easy-align
 vmap <Enter> <Plug>(EasyAlign)
 nmap <Leader>a <Plug>(EasyAlign)
-
-" movement in wrapped lines
-vmap <D-j> gj
-vmap <D-k> gk
-vmap <D-4> g$
-vmap <D-6> g^
-vmap <D-0> g^
-nmap <D-j> gj
-nmap <D-k> gk
-nmap <D-4> g$
-nmap <D-6> g^
-nmap <D-0> g^
 
 " vim-pasta
 let g:pasta_disabled_filetypes = ["python", "coffee", "markdown", "yaml", "slim", "haml"]
