@@ -223,6 +223,10 @@ augroup Text
   au FileType markdown,text map <silent> <leader>qs <Plug>ReplaceWithStraight
   au FileType markdown,text nnoremap <silent> <leader>qpl :call textobj#quote#init({ 'double':'„“', 'single':'‚‘' })<cr>
 
+  au FileType markdown,text nmap <leader>fr :call Formd("-r")<CR>
+  au FileType markdown,text nmap <leader>fi :call Formd("-i")<CR>
+  au FileType markdown,text nmap <leader>ft :call Formd("-f")<CR>
+
   au FileType markdown call lexical#init()
 augroup END
 
@@ -401,11 +405,5 @@ function! Formd(option)
     :endif
     :call winrestview(save_view)
 endfunction
-
-" formd mappings
-
-nmap <leader>fr :call Formd("-r")<CR>
-nmap <leader>fi :call Formd("-i")<CR>
-nmap <leader>f :call Formd("-f")<CR>
 
 let g:instant_markdown_autostart = 0
