@@ -141,9 +141,6 @@ set foldlevelstart=99
 
 nnoremap <silent><Leader>f :if &fdm == "indent" <bar> setl fdm=marker <bar> else <bar> setl fdm=indent <bar> endif<CR>
 
-" Paste mode
-set pastetoggle=<F5>
-
 " Jumps
 nnoremap <silent><S-TAB> <C-o>
 
