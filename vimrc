@@ -290,16 +290,6 @@ augroup Yaml
   au FileType yaml setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 augroup END
 
-augroup Text
-  au!
-  au FileType markdown setlocal textwidth=80 formatoptions+=1
-  au FileType text,markdown setlocal wrap linebreak
-  au FileType text,markdown,gitcommit setlocal complete+=k infercase
-  au FileType text,markdown,gitcommit setlocal isk-=-
-
-  au FileType markdown setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
-augroup END
-
 " Custom plugins settings
 
 " Vim-Ruby
