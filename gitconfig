@@ -42,6 +42,7 @@
   lds = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=short
   ld = log --pretty=format:"%C(yellow)%h\\ %ad%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --date=relative
   le = log --oneline --decorate
+  lm = log --oneline --decorate --merges
   filelog = log -u
   fl = log -u
   dlc = diff --cached HEAD^
