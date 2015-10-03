@@ -87,10 +87,10 @@ Plugin 'sjl/gundo.vim'
 Plugin 'suan/vim-instant-markdown', {'rtp': 'after'}
 Plugin 'thoughtbot/vim-rspec'
 Plugin 'tpope/vim-vinegar'
-Plugin 'cohama/lexima.vim'
 Plugin 'lukaszkorecki/CoffeeTags'
 Plugin 'Raimondi/delimitMate'
 Plugin 'tpope/vim-endwise'
+Plugin 'cohama/lexima.vim'
 
 call vundle#end()
 " Swap/backup files
