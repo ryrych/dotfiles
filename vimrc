@@ -235,7 +235,7 @@ augroup Text
   au FileType markdown,text call textobj#quote#init()
   au FileType markdown,text map <silent> <leader>qc <Plug>ReplaceWithCurly
   au FileType markdown,text map <silent> <leader>qs <Plug>ReplaceWithStraight
-  au FileType markdown,text nnoremap <silent> <leader>qpl :call textobj#quote#init({ 'double':'„“', 'single':'‚‘' })<cr>
+  au FileType markdown,text nnoremap <silent> <leader>qpl :call textobj#quote#init({ 'double':'„”', 'single':'‚’' })<cr>
 
   au FileType markdown,text nmap <leader>fr :call Formd("-r")<CR>
   au FileType markdown,text nmap <leader>fi :call Formd("-i")<CR>
