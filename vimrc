@@ -113,7 +113,7 @@ set incsearch
 set noinfercase
 
 " Command line
-set history=200
+set history=1000
 cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
 cnoremap <C-p> <Up>
