@@ -180,6 +180,9 @@ nnoremap <silent>A @=empty(getline(".")) ? "S" : "A"<CR>
 " Insert datetime
 inoremap <silent><Leader>dt <C-r>=strftime("%d-%m-%y %H:%M:%S")<CR>
 
+" Copy file path to clipboard
+noremap <silent> <F4> :let @+=expand("%:p")<CR>
+
 " Encoding
 set fileencoding=utf-8
 " set fileencodings=utf-8
