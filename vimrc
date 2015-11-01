@@ -91,6 +91,7 @@ Plugin 'lukaszkorecki/CoffeeTags'
 Plugin 'Raimondi/delimitMate'
 Plugin 'tpope/vim-endwise'
 Plugin 'cohama/lexima.vim'
+Plugin 'gorodinskiy/vim-coloresque'
 
 call vundle#end()
 " Swap/backup files
