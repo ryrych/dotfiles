@@ -243,6 +243,7 @@ augroup Text
   au FileType markdown,text nmap <leader>ft :call Formd("-f")<CR>
 
   au FileType markdown call lexical#init()
+  au FileType markdown nmap <leader>pm :call :InstantMarkdownPreview<CR>
 augroup END
 
 " Lispy identifiers support
@@ -384,6 +385,10 @@ let g:CoffeeAutoTagFile='./coffeetags'
 let g:CoffeeAutoTagIncludeVars=1
 " let g:CoffeeAutoTagTagRelative=0
 
+" instant-markdown-autostart
+let g:instant_markdown_autostart = 0
+let g:instant_markdown_slow = 1
+
 " inline-to-reference urls in markdown (http://www.drbunsen.org/markdown-formatting/)
 
 function! Formd(option)
@@ -398,8 +403,6 @@ function! Formd(option)
     :endif
     :call winrestview(save_view)
 endfunction
-
-let g:instant_markdown_autostart = 0
 
 function! SetupPL()
   :setlocal spell spelllang=pl
