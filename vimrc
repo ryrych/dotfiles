@@ -332,9 +332,11 @@ nnoremap <silent><Leader>n :CtrlSpaceGoDown<CR>
 let g:CtrlSpaceFileEngine = "file_engine_darwin_amd64"
 let g:CtrlSpaceSymbols = { "NTM": " ⁺" }
 
+" Ag
+
+let g:ag_prg="/usr/local/bin/ag --vimgrep --nocolor --nogroup --column --ignore node_modules --ignore bower_components --ignore dist --ignore tmp"
 if executable("ag")
   let g:CtrlSpaceGlobCommand = 'ag -l --nocolor -g ""'
-  let g:ctrlspace_glob_command = 'ag -l --nocolor -g ""'
 endif
 
 function! CtrlSpaceStartWindowIndicator()
@@ -353,9 +355,6 @@ let g:pasta_disabled_filetypes = ["python", "coffee", "markdown", "yaml", "slim"
 
 " Ctags
 nnoremap <F5> :!ctags -R --languages=ruby --exclude=.git --exclude=log . $(bundle list --paths) 2>/dev/null<CR>
-
-" Ag
-let g:agprg="/usr/local/bin/ag --vimgrep"
 
 " expand_region
 call expand_region#custom_text_objects({
