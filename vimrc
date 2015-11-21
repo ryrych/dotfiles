@@ -33,7 +33,7 @@ Plugin 'gmarik/Vundle.vim'
 
 Plugin 'Lokaltog/vim-easymotion'
 Plugin 'airblade/vim-gitgutter'
-Plugin 'altercation/vim-colors-solarized'
+Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'ervandew/supertab'
 Plugin 'glts/vim-textobj-comment'
 Plugin 'jgdavey/vim-blockle'
@@ -215,7 +215,7 @@ runtime macros/matchit.vim
 " Colors
 syntax enable
 set background=dark
-colorscheme solarized
+colorscheme PaperColor
 
 " Custom filetype settings
 
