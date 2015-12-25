@@ -10,6 +10,9 @@
 	default = simple
 [pull]
     rebase = true
+[merge]
+	conflictstyle = diff3
+	tool = opendiff
 [rebase]
     autostash = true
     autosquash = true
@@ -73,6 +76,3 @@
   rbm = rebase master
   fe = fetch
   pu = pull
-[merge]
-	tool = opendiff
-	conflictstyle = diff3
