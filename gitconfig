@@ -7,6 +7,7 @@
 	user = wryrych
 [merge]
 	conflictstyle = diff3
+    ff = only
 	tool = opendiff
 [pull]
     rebase = true
