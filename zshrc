@@ -30,6 +30,7 @@ alias git=hub
 alias gpr="hub pull-request"
 alias gcoo="git checkout --ours"
 alias gcot="git checkout --theirs"
+alias grm="git rebase master"
 
 # Fixes zsh: `no matches found: package-at-version#2.3.4`
 alias bower='noglob bower'
