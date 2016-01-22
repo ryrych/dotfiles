@@ -247,7 +247,7 @@ augroup Text
   au FileType markdown,text nmap <leader>ft :call Formd("-f")<CR>
 
   au FileType markdown call lexical#init()
-  au FileType markdown nmap <leader>pm :call :InstantMarkdownPreview<CR>
+  au FileType markdown nmap <leader>pm :InstantMarkdownPreview<CR>
 augroup END
 
 " Lispy identifiers support
