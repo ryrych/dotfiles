@@ -32,68 +32,97 @@ call vundle#begin()
 
 Plugin 'gmarik/Vundle.vim'
 
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'NLKNguyen/papercolor-theme'
+" Buffers / Files / Windows management
+Plugin 'szw/vim-ctrlspace'
+Plugin 'tpope/vim-vinegar'
+Plugin 'szw/vim-maximizer'
+Plugin 'majutsushi/tagbar'
 Plugin 'ervandew/supertab'
-Plugin 'glts/vim-textobj-comment'
+
+" Navigation
+Plugin 'Lokaltog/vim-easymotion'
+Plugin 'kshenoy/vim-signature'
+Plugin 'szw/vim-tags'
+
+" Selection
+Plugin 'terryma/vim-expand-region'
+Plugin 'terryma/vim-multiple-cursors'
+
+" Code formatting / commenting
+Plugin 'Raimondi/delimitMate'
+Plugin 'cohama/lexima.vim'
 Plugin 'jgdavey/vim-blockle'
 Plugin 'junegunn/vim-easy-align'
+Plugin 'sickill/vim-pasta'
+Plugin 'vim-scripts/indenthtml.vim'
+
+" Syntax highlighting / Linting tools
+Plugin 'Shutnik/jshint2.vim'
+Plugin 'editorconfig/editorconfig-vim'
+Plugin 'isRuslan/vim-es6'
+Plugin 'kchmck/vim-coffee-script'
+Plugin 'lukaszkorecki/CoffeeTags'
+Plugin 'mustache/vim-mustache-handlebars'
+Plugin 'pangloss/vim-javascript'
+Plugin 'scrooloose/syntastic'
+Plugin 'tpope/vim-haml'
+
+" Ruby / Rails
+
+Plugin 'thoughtbot/vim-rspec'
+Plugin 'tpope/vim-bundler'
+Plugin 'tpope/vim-endwise'
+Plugin 'tpope/vim-rails'
+Plugin 'tpope/vim-rake'
+Plugin 'tpope/vim-rvm'
+Plugin 'vim-ruby/vim-ruby'
+
+" Text objects
 Plugin 'kana/vim-textobj-entire'
 Plugin 'kana/vim-textobj-lastpat'
 Plugin 'kana/vim-textobj-line'
 Plugin 'kana/vim-textobj-user'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'kshenoy/vim-signature'
-Plugin 'majutsushi/tagbar'
-Plugin 'nelstrom/vim-markdown-folding'
-Plugin 'pangloss/vim-javascript'
-Plugin 'isRuslan/vim-es6'
-Plugin 'rking/ag.vim'
-Plugin 'scrooloose/syntastic'
-Plugin 'sickill/vim-pasta'
-Plugin 'szw/vim-commentary'
-Plugin 'szw/vim-ctrlspace'
-Plugin 'szw/vim-dict'
-Plugin 'szw/vim-g'
-Plugin 'szw/vim-indent-object'
-Plugin 'szw/vim-kompleter'
-Plugin 'szw/vim-maximizer'
-Plugin 'szw/vim-smartclose'
-Plugin 'szw/vim-tags'
-Plugin 'terryma/vim-expand-region'
-Plugin 'terryma/vim-multiple-cursors'
-Plugin 'tpope/vim-abolish'
-Plugin 'tpope/vim-characterize'
-Plugin 'tpope/vim-dispatch'
+Plugin 'glts/vim-textobj-comment'
+
+" Git / Files History
 Plugin 'tpope/vim-fugitive'
 Plugin 'int3/vim-extradite'
-Plugin 'tpope/vim-haml'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-bundler'
-Plugin 'tpope/vim-rake'
-Plugin 'tpope/vim-repeat'
-Plugin 'tpope/vim-rvm'
+Plugin 'airblade/vim-gitgutter'
+Plugin 'sjl/gundo.vim'
+
+" Writing / workflow
+Plugin 'reedes/vim-wordy'
+Plugin 'reedes/vim-lexical'
+Plugin 'reedes/vim-textobj-quote'
+
+" Markdown support
+Plugin 'plasticboy/vim-markdown'
+Plugin 'suan/vim-instant-markdown', {'rtp': 'after'}
+Plugin 'nelstrom/vim-markdown-folding'
+Plugin 'szw/vim-kompleter'
+
+" Language support / spellcheckers / thesaurses
+Plugin 'szw/vim-dict'
+Plugin 'szw/vim-g'
+
+" Utils
 Plugin 'tpope/vim-sleuth'
 Plugin 'tpope/vim-surround'
 Plugin 'tpope/vim-unimpaired'
-Plugin 'vim-ruby/vim-ruby'
-Plugin 'vim-scripts/indenthtml.vim'
-Plugin 'mustache/vim-mustache-handlebars'
-Plugin 'reedes/vim-wordy'
 Plugin 'nelstrom/vim-qargs'
-Plugin 'plasticboy/vim-markdown'
-Plugin 'reedes/vim-lexical'
-Plugin 'reedes/vim-textobj-quote'
-Plugin 'sjl/gundo.vim'
-Plugin 'suan/vim-instant-markdown', {'rtp': 'after'}
-Plugin 'thoughtbot/vim-rspec'
-Plugin 'tpope/vim-vinegar'
-Plugin 'lukaszkorecki/CoffeeTags'
-Plugin 'Raimondi/delimitMate'
-Plugin 'tpope/vim-endwise'
-Plugin 'cohama/lexima.vim'
+Plugin 'tpope/vim-repeat'
+Plugin 'rking/ag.vim'
+
+" Themes / colours
+Plugin 'NLKNguyen/papercolor-theme'
 Plugin 'gorodinskiy/vim-coloresque'
+
+" Other
+Plugin 'kana/vim-operator-user'
+Plugin 'haya14busa/vim-operator-flashy'
+Plugin 'tpope/vim-abolish'
+Plugin 'tpope/vim-characterize'
+Plugin 'tpope/vim-dispatch'
 
 call vundle#end()
 " Swap/backup files
