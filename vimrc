@@ -329,6 +329,15 @@ nnoremap <silent><F12> :Gstatus<CR>
 " Vim-Fugitive
 let g:mustache_abbreviations = 1
 
+" jshint2
+set runtimepath+=~/.vim/bundle/jshint2.vim
+let jshint2_save = 0
+let jshint2_min_height = 3
+let jshint2_max_height = 12
+
+" jshint validation
+nnoremap <silent><F1> :JSHint<CR>
+
 " CtrlSpace
 nnoremap <silent><Leader>p :CtrlSpaceGoUp<CR>
 nnoremap <silent><Leader>n :CtrlSpaceGoDown<CR>
