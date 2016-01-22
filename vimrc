@@ -338,6 +338,10 @@ let jshint2_max_height = 12
 " jshint validation
 nnoremap <silent><F1> :JSHint<CR>
 
+" editorconfig
+let g:EditorConfig_exclude_patterns = ['fugitive://.*']
+let g:EditorConfig_exec_path = "/usr/local/bin/EditorConfig"
+
 " CtrlSpace
 nnoremap <silent><Leader>p :CtrlSpaceGoUp<CR>
 nnoremap <silent><Leader>n :CtrlSpaceGoDown<CR>
