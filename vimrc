@@ -21,6 +21,7 @@ set noautochdir
 set cursorline
 set textwidth=80
 set clipboard=unnamed
+set listchars=tab:▸-,space:·,eol:¬,trail:·,nbsp:_
 let &colorcolumn=join(range(81,999),",")
 
 " Vundle
@@ -163,6 +164,9 @@ nnoremap <silent> "" :registers "0123456789abcdefghijklmnopqrstuvwxyz*+.:<CR>
 
 " Toggle wrapping
 nnoremap <silent><Leader>w :if &wrap <bar> set nowrap <bar> else <bar> set wrap <bar> endif<CR>
+
+" Toggle invisibles
+nmap <leader>ti :set list!<CR>
 
 " Mute highlight search
 nnoremap <silent><C-l> :<C-u>nohlsearch<CR><C-l>
