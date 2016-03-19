@@ -39,16 +39,3 @@ alias bower='noglob bower'
 PATH=/usr/local/bin:$PATH:$HOME/.rvm/bin:$HOME/.local/bin # Add RVM to PATH for scripting
 export PATH=./node_modules/.bin:$PATH
 
-# List processes related to rails
-pgr() {
-  for x in spring rails phantomjs zeus; do
-    pgrep -fl $x;
-  done
-}
-
-# Kill processes related to rails
-pgk() {
-  for x in spring rails phantomjs zeus; do
-    pkill -fl $x;
-  done
-}
