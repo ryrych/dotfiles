@@ -43,3 +43,6 @@ export PATH=./node_modules/.bin:$PATH
 
 export NVM_DIR="/Users/wojtekryrych/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
+
+# added by travis gem
+[ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
