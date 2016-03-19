@@ -25,18 +25,18 @@ source $ZSH/oh-my-zsh.sh
 
 # Personal Aliases
 
+alias aliasall="{ alias; git aliases; } | sort"
+alias bower='noglob bower' # Fixes zsh: `no matches found: package-at-version#2.3.4`
 alias ctg="ctags -R --languages=ruby --exclude=.git --exclude=log . $(bundle list --paths) 2>/dev/null"
-alias git=hub
-alias gpr="hub pull-request"
 alias gcoo="git checkout --ours"
 alias gcot="git checkout --theirs"
-alias grm="git rebase master"
+alias git=hub
+alias gpr="hub pull-request"
 alias grl="git rebase -i head~`$(git le head --not master | wc -l | awk '{print $1}')`"
-alias aliasall="{ alias; git aliases; } | sort"
+alias grm="git rebase master"
 alias ntb="cd ~/projects/NTBackend"
 alias ntf="cd ~/projects/NTFrontend"
 alias redis=~/.local/bin/redis-3.0.7/src/redis-server
-alias bower='noglob bower' # Fixes zsh: `no matches found: package-at-version#2.3.4`
 
 PATH=/usr/local/bin:$PATH:$HOME/.rvm/bin:$HOME/.local/bin # Add RVM to PATH for scripting
 export PATH=./node_modules/.bin:$PATH
