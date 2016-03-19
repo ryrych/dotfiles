@@ -25,7 +25,7 @@ source $ZSH/oh-my-zsh.sh
 
 # Personal Aliases
 
-alias=ctg="ctags -R --languages=ruby --exclude=.git --exclude=log . $(bundle list --paths) 2>/dev/null"
+alias ctg="ctags -R --languages=ruby --exclude=.git --exclude=log . $(bundle list --paths) 2>/dev/null"
 alias git=hub
 alias gpr="hub pull-request"
 alias gcoo="git checkout --ours"
