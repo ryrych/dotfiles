@@ -32,9 +32,11 @@ alias gcoo="git checkout --ours"
 alias gcot="git checkout --theirs"
 alias grm="git rebase master"
 alias grl="git rebase -i head~`$(git le head --not master | wc -l | awk '{print $1}')`"
-
-# Fixes zsh: `no matches found: package-at-version#2.3.4`
-alias bower='noglob bower'
+alias aliasall="{ alias; git aliases; } | sort"
+alias ntb="cd ~/projects/NTBackend"
+alias ntf="cd ~/projects/NTFrontend"
+alias redis=~/.local/bin/redis-3.0.7/src/redis-server
+alias bower='noglob bower' # Fixes zsh: `no matches found: package-at-version#2.3.4`
 
 PATH=/usr/local/bin:$PATH:$HOME/.rvm/bin:$HOME/.local/bin # Add RVM to PATH for scripting
 export PATH=./node_modules/.bin:$PATH
