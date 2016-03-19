@@ -46,3 +46,5 @@ export NVM_DIR="/Users/wojtekryrych/.nvm"
 
 # added by travis gem
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
+
+eval "$(thefuck --alias kuzwa)"
