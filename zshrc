@@ -41,3 +41,5 @@ alias redis=~/.local/bin/redis-3.0.7/src/redis-server
 PATH=/usr/local/bin:$PATH:$HOME/.rvm/bin:$HOME/.local/bin # Add RVM to PATH for scripting
 export PATH=./node_modules/.bin:$PATH
 
+export NVM_DIR="/Users/wojtekryrych/.nvm"
+[ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
