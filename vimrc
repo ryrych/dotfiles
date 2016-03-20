@@ -92,6 +92,7 @@ Plugin 'kana/vim-textobj-lastpat'
 Plugin 'kana/vim-textobj-line'
 Plugin 'kana/vim-textobj-user'
 Plugin 'glts/vim-textobj-comment'
+Plugin 'szw/vim-commentary'
 
 " Git / Files History
 Plugin 'tpope/vim-fugitive'
