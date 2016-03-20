@@ -400,6 +400,9 @@ let g:SuperTabDefaultCompletionType = "<c-x><c-u>"
 vmap <Enter> <Plug>(EasyAlign)
 nmap <Leader>a <Plug>(EasyAlign)
 
+" EasyMotion
+map <Leader><leader>w <Plug>(easymotion-wl)
+
 " vim-pasta
 let g:pasta_disabled_filetypes = ["python", "coffee", "markdown", "yaml", "slim", "haml"]
 
