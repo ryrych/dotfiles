@@ -14,7 +14,16 @@ set backspace=indent,eol,start
 set shortmess+=I
 set timeout timeoutlen=3000 ttimeoutlen=10
 set laststatus=2
-set statusline=%<%f%(\ %y%m%r%)%(\ %{fugitive#statusline()}%)%=%(\ %{CtrlSpaceStartWindowIndicator()}\ %)%-3.(%l,%c%V%)\ %P
+
+" http://stackoverflow.com/questions/5375240/a-more-useful-statusline-in-vim#5381514
+" %-0{minwid}.{maxwid}{item}
+set statusline=
+set statusline+=%<%f%(\ %y%m%r%) "file status (full path, modified, readonly flags)
+set statusline+=%(\ %{fugitive#statusline()}%) "git branch name
+set statusline+=%=%(\ %{CtrlSpaceStartWindowIndicator()}\ %) "vim-ctrlspace window status
+set statusline+=%-3.(%l,%c%V%)\ %P "document position (line & column number, % of progress)
+set statusline+=\ %{PencilMode()}
+
 set showtabline=0
 set nostartofline
 set noautochdir
