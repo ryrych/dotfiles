@@ -347,6 +347,9 @@ let g:dict_hosts = [["dict.org", ["english"]], ["dict.mova.org", ["slovnyk_en-pl
 let g:lexical#spelllang = ['en_us', 'en_gb', 'pl',]
 let g:lexical#thesaurus = ['~/.vim/thesaurus/mthesaur.txt',]
 
+" vim-markdown
+map <Plug> <Plug>Markdown_MoveToCurHeader
+
 " MacDict.vim
 map <leader>d "dyiw:call MacDict(@d)<CR>
 
