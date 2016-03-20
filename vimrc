@@ -272,9 +272,9 @@ augroup Text
   au FileType markdown,text map <silent> <leader>qc <Plug>ReplaceWithCurly
   au FileType markdown,text map <silent> <leader>qs <Plug>ReplaceWithStraight
 
-  au FileType markdown,text nmap <leader>fr :call Formd("-r")<CR>
-  au FileType markdown,text nmap <leader>fi :call Formd("-i")<CR>
-  au FileType markdown,text nmap <leader>ft :call Formd("-f")<CR>
+  au FileType markdown nmap <leader>fr :call Formd("-r")<CR>
+  au FileType markdown nmap <leader>fi :call Formd("-i")<CR>
+  au FileType markdown nmap <leader>ft :call Formd("-f")<CR>
 
   au FileType markdown call lexical#init()
 augroup END
