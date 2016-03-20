@@ -104,6 +104,7 @@ Plugin 'sjl/gundo.vim'
 Plugin 'reedes/vim-wordy'
 Plugin 'reedes/vim-lexical'
 Plugin 'reedes/vim-textobj-quote'
+Plugin 'junegunn/goyo.vim'
 
 " Markdown support
 Plugin 'plasticboy/vim-markdown'
