@@ -28,10 +28,10 @@ set showtabline=0
 set nostartofline
 set noautochdir
 set cursorline
-set textwidth=80
+set textwidth=90
 set clipboard=unnamed
 set listchars=tab:▸-,space:·,eol:¬,trail:·,nbsp:_
-let &colorcolumn=join(range(81,999),",")
+let &colorcolumn=join(range(91,999),",")
 
 " Vundle
 filetype off
