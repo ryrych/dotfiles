@@ -110,6 +110,7 @@ Plugin 'plasticboy/vim-markdown'
 Plugin 'junegunn/vim-xmark', { 'do': 'make' }
 Plugin 'nelstrom/vim-markdown-folding'
 Plugin 'szw/vim-kompleter'
+Plugin 'reedes/vim-pencil'
 
 " Language support / spellcheckers / thesaurses
 Plugin 'szw/vim-dict'
