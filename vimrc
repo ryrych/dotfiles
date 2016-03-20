@@ -107,7 +107,7 @@ Plugin 'reedes/vim-textobj-quote'
 
 " Markdown support
 Plugin 'plasticboy/vim-markdown'
-Plugin 'suan/vim-instant-markdown', {'rtp': 'after'}
+Plugin 'junegunn/vim-xmark', { 'do': 'make' }
 Plugin 'nelstrom/vim-markdown-folding'
 Plugin 'szw/vim-kompleter'
 
@@ -274,7 +274,6 @@ augroup Text
   au FileType markdown,text nmap <leader>ft :call Formd("-f")<CR>
 
   au FileType markdown call lexical#init()
-  au FileType markdown nmap <leader>pm :InstantMarkdownPreview<CR>
 augroup END
 
 " Lispy identifiers support
@@ -427,10 +426,6 @@ let g:CoffeeAutoTagDisabled=1
 let g:CoffeeAutoTagFile='./coffeetags'
 let g:CoffeeAutoTagIncludeVars=1
 " let g:CoffeeAutoTagTagRelative=0
-
-" instant-markdown-autostart
-let g:instant_markdown_autostart = 0
-let g:instant_markdown_slow = 1
 
 " inline-to-reference urls in markdown (http://www.drbunsen.org/markdown-formatting/)
 
