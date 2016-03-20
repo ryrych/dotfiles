@@ -114,6 +114,7 @@ Plugin 'szw/vim-kompleter'
 " Language support / spellcheckers / thesaurses
 Plugin 'szw/vim-dict'
 Plugin 'szw/vim-g'
+Plugin 'jonhiggs/MacDict.vim'
 
 " Utils
 Plugin 'tpope/vim-sleuth'
@@ -342,6 +343,9 @@ let g:dict_hosts = [["dict.org", ["english"]], ["dict.mova.org", ["slovnyk_en-pl
 " vim-lexical
 let g:lexical#spelllang = ['en_us', 'en_gb', 'pl',]
 let g:lexical#thesaurus = ['~/.vim/thesaurus/mthesaur.txt',]
+
+" MacDict.vim
+map <leader>d "dyiw:call MacDict(@d)<CR>
 
 " Tagbar
 nmap <silent><F8> :TagbarToggle<CR>
