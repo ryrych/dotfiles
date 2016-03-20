@@ -291,8 +291,9 @@ augroup Ruby
   au FileType ruby,eruby,haml let g:rubycomplete_rails = 1
   au FileType ruby,eruby,haml let g:rubycomplete_classes_in_global = 1
   au FileType ruby,eruby,haml setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
-  au FileType ruby setlocal isk-=-
   au FileType ruby,eruby,haml Rvm
+  au FileType ruby setlocal isk-=-
+  au FileType ruby nnoremap <F5> :!ctags -R --languages=ruby --exclude=.git --exclude=log . $(bundle list --paths) 2>/dev/null<CR>
 augroup END
 
 augroup Javascript
@@ -400,9 +401,6 @@ nmap <Leader>a <Plug>(EasyAlign)
 
 " vim-pasta
 let g:pasta_disabled_filetypes = ["python", "coffee", "markdown", "yaml", "slim", "haml"]
-
-" Ctags
-nnoremap <F5> :!ctags -R --languages=ruby --exclude=.git --exclude=log . $(bundle list --paths) 2>/dev/null<CR>
 
 " expand_region
 call expand_region#custom_text_objects({
