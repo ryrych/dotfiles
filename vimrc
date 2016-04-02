@@ -109,6 +109,12 @@ nnoremap <silent><Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
 nnoremap <silent><Leader>> :exe "vertical resize " . (winwidth(0) * 3/2)<CR>
 nnoremap <silent><Leader>< :exe "vertical resize " . (winwidth(0) * 2/3)<CR>
 
+" Quicker window movement
+nnoremap <C-j> <C-w>j
+nnoremap <C-k> <C-w>k
+nnoremap <C-h> <C-w>h
+nnoremap <C-l> <C-w>l
+
 " Insert mode with indent
 nnoremap <silent>i @=empty(getline(".")) ? "S" : "i"<CR>
 nnoremap <silent>I @=empty(getline(".")) ? "S" : "I"<CR>
