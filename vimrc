@@ -108,9 +108,6 @@ nnoremap <silent><Leader>w :if &wrap <bar> set nowrap <bar> else <bar> set wrap 
 " Toggle invisibles
 nmap <leader>ti :set list!<CR>
 
-" Mute highlight search
-nnoremap <silent><C-l> :<C-u>nohlsearch<CR><C-l>
-
 "Improve window resizing
 nnoremap <silent><Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
 nnoremap <silent><Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
@@ -177,7 +174,7 @@ let g:ruby_indent_access_modifier_style = "indent"
 " RSpec.vim mappings
 map <Leader>t :call RunCurrentSpecFile()<CR>
 map <Leader>s :call RunNearestSpec()<CR>
-map <Leader>l :call RunLastSpec()<CR>
+map <Leader>la :call RunLastSpec()<CR>
 map <Leader>al :call RunAllSpecs()<CR>
 let g:rspec_runner = "os_x_iterm"
 
