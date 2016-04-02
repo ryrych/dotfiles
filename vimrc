@@ -116,7 +116,6 @@ Plugin 'szw/vim-kompleter'
 Plugin 'reedes/vim-pencil'
 
 " Language support / spellcheckers / thesaurses
-Plugin 'szw/vim-dict'
 Plugin 'szw/vim-g'
 Plugin 'jonhiggs/MacDict.vim'
 
@@ -232,7 +231,6 @@ set wildignore=.git,.svn,CVS,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.
 
 " Completion settings
 set ofu=syntaxcomplete#Complete
-set dictionary+=/usr/share/dict/words
 
 " Omnicompletion trigger
 if !has("gui_running")
@@ -341,9 +339,6 @@ map <Leader>s :call RunNearestSpec()<CR>
 map <Leader>l :call RunLastSpec()<CR>
 map <Leader>al :call RunAllSpecs()<CR>
 let g:rspec_runner = "os_x_iterm"
-
-" Dict
-let g:dict_hosts = [["dict.org", ["english"]], ["dict.mova.org", ["slovnyk_en-pl", "slovnyk_pl-en"]]]
 
 " vim-lexical
 let g:lexical#spelllang = ['en_us', 'en_gb', 'pl',]
