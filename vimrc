@@ -70,7 +70,6 @@ Plugin 'Shutnik/jshint2.vim'
 Plugin 'editorconfig/editorconfig-vim'
 Plugin 'isRuslan/vim-es6'
 Plugin 'kchmck/vim-coffee-script'
-Plugin 'lukaszkorecki/CoffeeTags'
 Plugin 'mustache/vim-mustache-handlebars'
 Plugin 'pangloss/vim-javascript'
 Plugin 'scrooloose/syntastic'
@@ -430,11 +429,6 @@ let g:vim_tags_project_tags_command = "{CTAGS} -R {OPTIONS} {DIRECTORY} 2>/dev/n
 let g:vim_tags_gems_tags_command = "{CTAGS} -R {OPTIONS} `bundle show --paths` 2>/dev/null"
 let g:vim_tags_use_vim_dispatch = 1
 let g:vim_tags_use_language_field = 1
-
-let g:CoffeeAutoTagDisabled=1
-let g:CoffeeAutoTagFile='./coffeetags'
-let g:CoffeeAutoTagIncludeVars=1
-" let g:CoffeeAutoTagTagRelative=0
 
 " inline-to-reference urls in markdown (http://www.drbunsen.org/markdown-formatting/)
 
