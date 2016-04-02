@@ -1,0 +1,74 @@
+" Remove trailing spaces
+augroup TrailingSpaces
+  au!
+  au BufWritePre * if &ft != "markdown" | let b:cpos = [line("."), col(".")] | %s/\s\+$//e | call cursor(b:cpos) | endif
+augroup END
+
+augroup Text
+  au!
+  au FileType markdown setlocal textwidth=80 formatoptions+=1
+  au FileType markdown setlocal tabstop=4 softtabstop=4 shiftwidth=4 expandtab
+  au FileType markdown setlocal wrap linebreak
+  au FileType markdown,text,gitcommit setlocal complete+=k infercase
+  au FileType markdown,text,gitcommit setlocal isk-=-
+
+  au FileType markdown,text call textobj#quote#init()
+  au FileType markdown,text map <silent> <leader>qc <Plug>ReplaceWithCurly
+  au FileType markdown,text map <silent> <leader>qs <Plug>ReplaceWithStraight
+
+  au FileType markdown nmap <leader>fr :call Formd("-r")<CR>
+  au FileType markdown nmap <leader>fi :call Formd("-i")<CR>
+  au FileType markdown nmap <leader>ft :call Formd("-f")<CR>
+
+  au FileType markdown call lexical#init()
+augroup END
+
+" Lispy identifiers support
+" https://github.com/szw/vim-kompleter#lispy-identifiers
+augroup LispyIdentifiers
+  au!
+  au FileType lisp,clojure,html,xml,xhtml,haml,eruby,css,scss,sass,javascript,coffee setlocal isk+=-
+augroup END
+
+augroup Ruby
+  au!
+  au FileType ruby,eruby,haml setlocal omnifunc=rubycomplete#Complete
+  au FileType ruby,eruby,haml let g:rubycomplete_buffer_loading = 1
+  au FileType ruby,eruby,haml let g:rubycomplete_rails = 1
+  au FileType ruby,eruby,haml let g:rubycomplete_classes_in_global = 1
+  au FileType ruby,eruby,haml setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+  au FileType ruby,eruby,haml Rvm
+  au FileType ruby setlocal isk-=-
+  au FileType ruby nnoremap <F5> :!ctags -R --languages=ruby --exclude=.git --exclude=log . $(bundle list --paths) 2>/dev/null<CR>
+augroup END
+
+augroup Javascript
+  au!
+  au FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS tabstop=4 softtabstop=4 shiftwidth=4 expandtab
+augroup END
+
+augroup CoffeeScript
+  au!
+  au FileType coffee setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+augroup END
+
+augroup Html
+  au!
+  au FileType html setlocal omnifunc=htmlcomplete#CompleteTags
+augroup END
+
+augroup Css
+  au!
+  au FileType css,scss setlocal omnifunc=csscomplete#CompleteCSS
+  au FileType scss setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+augroup END
+
+augroup Xml
+  au!
+  au FileType xml setlocal omnifunc=xmlcomplete#CompleteTags
+augroup END
+
+augroup Yaml
+  au!
+  au FileType yaml setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
+augroup END
