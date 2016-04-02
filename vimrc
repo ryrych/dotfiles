@@ -260,23 +260,3 @@ let g:vim_tags_project_tags_command = "{CTAGS} -R {OPTIONS} {DIRECTORY} 2>/dev/n
 let g:vim_tags_gems_tags_command = "{CTAGS} -R {OPTIONS} `bundle show --paths` 2>/dev/null"
 let g:vim_tags_use_vim_dispatch = 1
 let g:vim_tags_use_language_field = 1
-
-" inline-to-reference urls in markdown (http://www.drbunsen.org/markdown-formatting/)
-
-function! Formd(option)
-    :let save_view = winsaveview()
-    :let flag = a:option
-    :if flag == "-r"
-        :%! ~/.local/bin/formd -r
-    :elseif flag == "-i"
-        :%! ~/.local/bin/formd -i
-    :else
-        :%! ~/.local/bin/formd -f
-    :endif
-    :call winrestview(save_view)
-endfunction
-
-function! SetupPL()
-  :setlocal spell spelllang=pl
-  :nnoremap <silent> <leader>qpl :call textobj#quote#init({ 'double':'„”', 'single':'‚’' })<cr>
-endfunction
