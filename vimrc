@@ -40,6 +40,10 @@ if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
 
+if filereadable(expand("~/.vimrc.augroups"))
+  source ~/.vimrc.augroups
+endif
+
 " Swap/backup files
 set noswapfile
 set dir=/tmp
