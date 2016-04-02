@@ -44,6 +44,10 @@ if filereadable(expand("~/.vimrc.augroups"))
   source ~/.vimrc.augroups
 endif
 
+if filereadable(expand("~/.vimrc.writing"))
+  source ~/.vimrc.writing
+endif
+
 " Swap/backup files
 set noswapfile
 set dir=/tmp
