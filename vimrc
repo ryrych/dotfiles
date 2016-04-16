@@ -69,6 +69,8 @@ cnoremap <C-b> <Left>
 cnoremap <C-f> <Right>
 cnoremap <M-b> <S-Left>
 cnoremap <M-f> <S-Right>
+cnoremap <C-d>  <Delete>
+cnoremap <C-g>  <C-c>
 
 if has("user_commands")
   command! -bang -nargs=? -complete=file E e<bang> <args>
