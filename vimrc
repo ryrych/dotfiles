@@ -264,6 +264,25 @@ let g:vim_tags_gems_tags_command = "{CTAGS} -R {OPTIONS} `bundle show --paths` 2
 let g:vim_tags_use_vim_dispatch = 1
 let g:vim_tags_use_language_field = 1
 
+" neoterm config
+if has("nvim")
+  " change cursor to bar in insert mode
+  let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
+
+  " disable mouse support, what am I a vimposer?
+  set mouse-=a
+
+  " run tests with :T
+  let test#strategy = "neoterm"
+
+  " vertical split instead of the default horizontal
+  let g:neoterm_position = "vertical"
+
+  " pretty much essential: by default in terminal mode, you have to press ctrl-\-n to get into normal mode
+  " ain't nobody got time for that
+  tnoremap <Esc> <C-\><C-n>
+endif
+
 if filereadable(expand("~/.vimrc.augroups"))
   source ~/.vimrc.augroups
 endif
