@@ -36,7 +36,6 @@ alias grl="git rebase -i head~`$(git le head --not master | wc -l | awk '{print 
 alias grm="git rebase master"
 alias ntb="cd ~/projects/NTBackend"
 alias ntf="cd ~/projects/NTFrontend"
-alias redis=~/.local/bin/redis-3.0.7/src/redis-server
 
 PATH=/usr/local/bin:$PATH:$HOME/.rvm/bin:$HOME/.local/bin # Add RVM to PATH for scripting
 export PATH=./node_modules/.bin:$PATH
