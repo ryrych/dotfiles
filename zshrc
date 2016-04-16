@@ -28,13 +28,17 @@ source $ZSH/oh-my-zsh.sh
 alias aliasall="{ alias; git aliases; } | sort"
 alias bower='noglob bower' # Fixes zsh: `no matches found: package-at-version#2.3.4`
 alias ctg="ctags -R --languages=ruby --exclude=.git --exclude=log . $(bundle list --paths) 2>/dev/null"
+
+# git aliases
+
 alias gcoo="git checkout --ours"
 alias gcot="git checkout --theirs"
+alias ggfpush='git push -f origin $(git_current_branch)'
 alias git=hub
 alias gpr="hub pull-request"
 alias grl="git rebase -i head~`(git le head --not master | wc -l | awk '{print $1}')`"
 alias grm="git rebase master"
-alias ggfpush='git push -f origin $(git_current_branch)'
+
 alias ntb="cd ~/projects/NTBackend"
 alias ntf="cd ~/projects/NTFrontend"
 alias tmux="TERM=screen-256color-bce tmux"
