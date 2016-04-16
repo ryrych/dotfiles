@@ -220,9 +220,8 @@ let g:CtrlSpaceFileEngine = "file_engine_darwin_amd64"
 let g:CtrlSpaceSymbols = { "NTM": " ⁺" }
 
 " Ag
-
-let g:ag_prg="/usr/local/bin/ag --vimgrep --nocolor --nogroup --column --ignore node_modules --ignore bower_components --ignore dist --ignore tmp"
 if executable("ag")
+  set grepprg=ag\ --nogroup\ --nocolor
   let g:CtrlSpaceGlobCommand = 'ag -l --nocolor -g ""'
 endif
 
