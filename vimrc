@@ -40,14 +40,6 @@ if filereadable(expand("~/.vimrc.bundles"))
   source ~/.vimrc.bundles
 endif
 
-if filereadable(expand("~/.vimrc.augroups"))
-  source ~/.vimrc.augroups
-endif
-
-if filereadable(expand("~/.vimrc.writing"))
-  source ~/.vimrc.writing
-endif
-
 " Swap/backup files
 set noswapfile
 set dir=/tmp
@@ -263,3 +255,11 @@ let g:vim_tags_project_tags_command = "{CTAGS} -R {OPTIONS} {DIRECTORY} 2>/dev/n
 let g:vim_tags_gems_tags_command = "{CTAGS} -R {OPTIONS} `bundle show --paths` 2>/dev/null"
 let g:vim_tags_use_vim_dispatch = 1
 let g:vim_tags_use_language_field = 1
+
+if filereadable(expand("~/.vimrc.augroups"))
+  source ~/.vimrc.augroups
+endif
+
+if filereadable(expand("~/.vimrc.writing"))
+  source ~/.vimrc.writing
+endif
