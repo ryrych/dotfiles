@@ -24,6 +24,9 @@ plugins=(git git-prompt gitignore.plugin)
 
 source $ZSH/oh-my-zsh.sh
 
+# Completion for tmuxinator
+source ~/.local/bin/tmuxinator.zsh
+
 # Personal Aliases
 
 alias aliasall="{ alias; git aliases; } | sort"
