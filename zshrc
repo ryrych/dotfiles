@@ -37,6 +37,7 @@ alias grm="git rebase master"
 alias ggfpush='git push -f origin $(git_current_branch)'
 alias ntb="cd ~/projects/NTBackend"
 alias ntf="cd ~/projects/NTFrontend"
+alias tmux="TERM=screen-256color-bce tmux"
 
 PATH=/usr/local/bin:$PATH:$HOME/.rvm/bin:$HOME/.local/bin # Add RVM to PATH for scripting
 export PATH=./node_modules/.bin:$PATH
