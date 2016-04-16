@@ -1,5 +1,6 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/wojtekryrych/.oh-my-zsh
+export EDITOR='nvim'
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
