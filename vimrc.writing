@@ -12,7 +12,27 @@ function! Formd(option)
     :call winrestview(save_view)
 endfunction
 
-function! SetupPL()
+function! SetupWriting()
+    setlocal spell spelllang=en
+    setlocal wrap linebreak nolist
+    setlocal textwidth=0 wrapmargin=0
+    setlocal formatoptions-=t
+    set formatprg=par\ -w90
+
+    " if does not work try :PencilSoft
+    call pencil#init({'wrap': 'soft'})
+
+    call textobj#quote#init()
+    map <silent> <leader>qc <Plug>ReplaceWithCurly
+    map <silent> <leader>qs <Plug>ReplaceWithStraight
+    map <leader>g :Goyo<CR>:GitGutterEnable<CR>
+
+    au FileType markdown nmap <leader>fr :call Formd("-r")<CR>
+    au FileType markdown nmap <leader>fi :call Formd("-i")<CR>
+    au FileType markdown nmap <leader>ft :call Formd("-f")<CR>
+endfunction
+
+function! SetupWritingPL()
     :setlocal spell spelllang=pl
     :nnoremap <silent> <leader>qpl :call textobj#quote#init({ 'double':'„”', 'single':'‚’' })<cr>
 endfunction
