@@ -232,9 +232,6 @@ function! CtrlSpaceStartWindowIndicator()
     return ctrlspace#api#BufNr() != -1 && t:CtrlSpaceStartWindow == winnr() ? ctrlspace#context#Configuration().Symbols.IA . " " : ""
 endfunction
 
-" SuperTab
-let g:SuperTabDefaultCompletionType = "<c-x><c-u>"
-
 " easy-align
 vmap <Enter> <Plug>(EasyAlign)
 nmap <Leader>a <Plug>(EasyAlign)
@@ -291,3 +288,6 @@ exe 'source ' g:vimrcAugroups
 
 " http://www.bestofvim.com/tip/leave-ex-mode-good/
 nnoremap Q <nop>
+
+" SuperTab
+let g:SuperTabDefaultCompletionType = "<c-x><c-u>"
