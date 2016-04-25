@@ -289,6 +289,5 @@ endif
 exe 'source ' g:vimrcWriting
 exe 'source ' g:vimrcAugroups
 
-if filereadable(expand("~/.vimrc.writing"))
-  source ~/.vimrc.writing
-endif
+" http://www.bestofvim.com/tip/leave-ex-mode-good/
+nnoremap Q <nop>
