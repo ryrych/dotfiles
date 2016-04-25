@@ -36,9 +36,12 @@ set clipboard=unnamed
 set listchars=tab:»·,space:·,eol:¬,trail:·,nbsp:_
 let &colorcolumn=join(range(91,999),",")
 
-if filereadable(expand("~/.vimrc.bundles"))
-  source ~/.vimrc.bundles
-endif
+let g:dotfilesPath  = '~/dotfiles/'
+let g:vimrcBundles  = g:dotfilesPath . 'vimrc.bundles'
+let g:vimrcAugroups = g:dotfilesPath . 'vimrc.augroups'
+let g:vimrcWriting  = g:dotfilesPath . 'vimrc.writing'
+
+exe 'source ' g:vimrcBundles
 
 " Swap/backup files
 set noswapfile
@@ -283,9 +286,8 @@ if has("nvim")
   tnoremap <Esc> <C-\><C-n>
 endif
 
-if filereadable(expand("~/.vimrc.augroups"))
-  source ~/.vimrc.augroups
-endif
+exe 'source ' g:vimrcWriting
+exe 'source ' g:vimrcAugroups
 
 if filereadable(expand("~/.vimrc.writing"))
   source ~/.vimrc.writing
