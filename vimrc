@@ -140,6 +140,10 @@ inoremap <silent><Leader>dt <C-r>=strftime("%d-%m-%y %H:%M:%S")<CR>
 " Copy file path to clipboard
 noremap <silent> <F4> :let @+=expand("%:p")<CR>
 
+" Expand current file path to directory it is in
+" e.g ~/projects/foo/bar.js => ~/projects/foo/
+cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
+
 " Encoding
 set fileencoding=utf-8
 " set fileencodings=utf-8
