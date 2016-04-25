@@ -107,7 +107,7 @@ nnoremap <silent><Leader>w :if &wrap <bar> set nowrap <bar> else <bar> set wrap 
 nmap <leader>ti :set list!<CR>
 
 " Mute highlight search
-nmap \q :nohlsearch<CR>
+nnoremap <space> :nohlsearch<cr>
 
 "Improve window resizing
 nnoremap <silent><Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
