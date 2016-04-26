@@ -36,3 +36,18 @@ function! SetupWritingPL()
     :setlocal spell spelllang=pl
     :nnoremap <silent> <leader>qpl :call textobj#quote#init({ 'double':'„”', 'single':'‚’' })<cr>
 endfunction
+
+function! SetupProtip()
+    :setlocal spell spelllang=en
+    :let l:protipTemplatePath = '~/projects/ryrych_blog/protip-template.md'
+    :let l:newProtipPath      = '~/projects/ryrych_blog/_drafts/' . strftime("%Y-%m-%d") . "-protip.md"
+    :exe 'edit ' . l:newProtipPath
+    :exe 'read ' . l:protipTemplatePath
+    :call SetupWriting()
+    :Goyo
+    :!open http://localhost:4000
+endfunction
+
+function! MakeProtipUrl()
+    :source ~/projects/ryrych_blog/make_url.vim
+endfunction
