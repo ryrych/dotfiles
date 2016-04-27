@@ -70,6 +70,7 @@
   sa = stash apply
   ss = stash save
   pushall = push --recurse-submodules=on-demand
+  pf = push --force-with-lease
   rb = rebase
   rbi = rebase -i
   rbc = rebase --continue

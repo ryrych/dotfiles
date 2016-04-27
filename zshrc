@@ -37,7 +37,7 @@ alias ctg="ctags -R --languages=ruby --exclude=.git --exclude=log . $(bundle lis
 
 alias gcoo="git checkout --ours"
 alias gcot="git checkout --theirs"
-alias ggfpush='git push -f origin $(git_current_branch)'
+alias ggfpush='git push --force-with-lease origin $(git_current_branch)'
 alias git=hub
 alias gpr="hub pull-request"
 alias grl="git rebase -i head~`(git le head --not master | wc -l | awk '{print $1}')`"
