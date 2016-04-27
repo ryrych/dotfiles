@@ -1,106 +1,103 @@
 filetype off
 
-set rtp+=~/.vim/bundle/Vundle.vim/
-call vundle#begin()
-
-Plugin 'gmarik/Vundle.vim'
+call plug#begin('~/.config/nvim/plugged')
 
 " Buffers / Files / Windows management
-Plugin 'szw/vim-ctrlspace'
-Plugin 'tpope/vim-vinegar'
-Plugin 'szw/vim-maximizer'
-Plugin 'majutsushi/tagbar'
-Plugin 'ervandew/supertab'
+Plug 'szw/vim-ctrlspace'
+Plug 'tpope/vim-vinegar'
+Plug 'szw/vim-maximizer'
+Plug 'majutsushi/tagbar'
+Plug 'ervandew/supertab'
 
 " Navigation
-Plugin 'Lokaltog/vim-easymotion'
-Plugin 'kshenoy/vim-signature'
-Plugin 'szw/vim-tags'
+Plug 'Lokaltog/vim-easymotion'
+Plug 'kshenoy/vim-signature'
+Plug 'szw/vim-tags'
 
 " Selection
-Plugin 'terryma/vim-expand-region'
-Plugin 'terryma/vim-multiple-cursors'
+Plug 'terryma/vim-expand-region'
+Plug 'terryma/vim-multiple-cursors'
 
 " Code formatting / commenting
-Plugin 'Raimondi/delimitMate'
-Plugin 'cohama/lexima.vim'
-Plugin 'jgdavey/vim-blockle'
-Plugin 'junegunn/vim-easy-align'
-Plugin 'sickill/vim-pasta'
-Plugin 'vim-scripts/indenthtml.vim'
+Plug 'Raimondi/delimitMate'
+Plug 'cohama/lexima.vim'
+Plug 'jgdavey/vim-blockle'
+Plug 'junegunn/vim-easy-align'
+Plug 'sickill/vim-pasta'
+Plug 'vim-scripts/indenthtml.vim'
 
 " Syntax highlighting / Linting tools
-Plugin 'Shutnik/jshint2.vim'
-Plugin 'editorconfig/editorconfig-vim'
-Plugin 'isRuslan/vim-es6'
-Plugin 'kchmck/vim-coffee-script'
-Plugin 'mustache/vim-mustache-handlebars'
-Plugin 'pangloss/vim-javascript'
-Plugin 'scrooloose/syntastic'
-Plugin 'tpope/vim-haml'
+Plug 'Shutnik/jshint2.vim'
+Plug 'editorconfig/editorconfig-vim'
+Plug 'isRuslan/vim-es6'
+Plug 'kchmck/vim-coffee-script'
+Plug 'mustache/vim-mustache-handlebars'
+Plug 'pangloss/vim-javascript'
+Plug 'scrooloose/syntastic'
+Plug 'tpope/vim-haml'
 
 " Ruby / Rails
 
-Plugin 'tpope/vim-bundler'
-Plugin 'tpope/vim-endwise'
-Plugin 'tpope/vim-rails'
-Plugin 'tpope/vim-rake'
-Plugin 'tpope/vim-rvm'
-Plugin 'vim-ruby/vim-ruby'
+Plug 'tpope/vim-bundler'
+Plug 'tpope/vim-endwise'
+Plug 'tpope/vim-rails'
+Plug 'tpope/vim-rake'
+Plug 'tpope/vim-rvm'
+Plug 'vim-ruby/vim-ruby'
 
 " Text objects
-Plugin 'kana/vim-textobj-entire'
-Plugin 'kana/vim-textobj-lastpat'
-Plugin 'kana/vim-textobj-line'
-Plugin 'kana/vim-textobj-user'
-Plugin 'glts/vim-textobj-comment'
-Plugin 'szw/vim-commentary'
+Plug 'kana/vim-textobj-entire'
+Plug 'kana/vim-textobj-lastpat'
+Plug 'kana/vim-textobj-line'
+Plug 'kana/vim-textobj-user'
+Plug 'glts/vim-textobj-comment'
+Plug 'szw/vim-commentary'
 
 " Git / Files History
-Plugin 'tpope/vim-fugitive'
-Plugin 'int3/vim-extradite'
-Plugin 'airblade/vim-gitgutter'
-Plugin 'sjl/gundo.vim'
+Plug 'tpope/vim-fugitive'
+Plug 'int3/vim-extradite'
+Plug 'airblade/vim-gitgutter'
+Plug 'sjl/gundo.vim'
 
 " Writing / workflow
-Plugin 'reedes/vim-wordy'
-Plugin 'reedes/vim-lexical'
-Plugin 'reedes/vim-textobj-quote'
-Plugin 'junegunn/goyo.vim'
+Plug 'reedes/vim-wordy'
+Plug 'reedes/vim-lexical'
+Plug 'reedes/vim-textobj-quote'
+Plug 'junegunn/goyo.vim'
 
 " Markdown support
-Plugin 'plasticboy/vim-markdown'
-Plugin 'junegunn/vim-xmark', { 'do': 'make' }
-Plugin 'nelstrom/vim-markdown-folding'
-Plugin 'szw/vim-kompleter'
-Plugin 'reedes/vim-pencil'
+Plug 'plasticboy/vim-markdown'
+Plug 'junegunn/vim-xmark', { 'do': 'make' }
+Plug 'nelstrom/vim-markdown-folding'
+Plug 'szw/vim-kompleter'
+Plug 'reedes/vim-pencil'
 
 " Language support / spellcheckers / thesaurses
-Plugin 'szw/vim-g'
-Plugin 'jonhiggs/MacDict.vim'
+Plug 'szw/vim-g'
+Plug 'jonhiggs/MacDict.vim'
 
 " Utils
-Plugin 'tpope/vim-sleuth'
-Plugin 'tpope/vim-surround'
-Plugin 'tpope/vim-unimpaired'
-Plugin 'nelstrom/vim-qargs'
-Plugin 'tpope/vim-repeat'
-Plugin 'rking/ag.vim'
+Plug 'tpope/vim-sleuth'
+Plug 'tpope/vim-surround'
+Plug 'tpope/vim-unimpaired'
+Plug 'nelstrom/vim-qargs'
+Plug 'tpope/vim-repeat'
+Plug 'rking/ag.vim'
 
 " Themes / colours
-Plugin 'NLKNguyen/papercolor-theme'
-Plugin 'gorodinskiy/vim-coloresque'
+Plug 'NLKNguyen/papercolor-theme'
+Plug 'gorodinskiy/vim-coloresque'
 
 " Other
-Plugin 'kana/vim-operator-user'
-Plugin 'haya14busa/vim-operator-flashy'
-Plugin 'tpope/vim-abolish'
-Plugin 'tpope/vim-characterize'
-Plugin 'tpope/vim-dispatch'
+Plug 'kana/vim-operator-user'
+Plug 'haya14busa/vim-operator-flashy'
+Plug 'tpope/vim-abolish'
+Plug 'tpope/vim-characterize'
+Plug 'tpope/vim-dispatch'
 
 "Neovim only
-Plugin 'janko-m/vim-test'
-Plugin 'kassio/neoterm'
-" Plugin 'benekastah/neomake'
+Plug 'janko-m/vim-test'
+Plug 'kassio/neoterm'
+" Plug 'benekastah/neomake'
 
-call vundle#end()
+call plug#end()
