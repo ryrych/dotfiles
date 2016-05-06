@@ -51,3 +51,9 @@ endfunction
 function! MakeProtipUrl()
     :source ~/projects/ryrych_blog/make_url.vim
 endfunction
+
+function! ReplaceKbd()
+    " <k>Ctrl</k> => <kbd>Ctrl</kbd
+    :%s/<k>/<kbd>/g
+    :%s/<\/k>/<\/kbd>/g
+endfunction
