@@ -285,9 +285,6 @@ if has("nvim")
   " run tests with :T
   let test#strategy = "neoterm"
 
-  " vertical split instead of the default horizontal
-  let g:neoterm_position = "vertical"
-
   " pretty much essential: by default in terminal mode, you have to press ctrl-\-n to get into normal mode
   " ain't nobody got time for that
   tnoremap <Esc> <C-\><C-n>
