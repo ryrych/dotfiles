@@ -37,6 +37,9 @@ set clipboard=unnamed
 set listchars=tab:»·,space:·,eol:¬,trail:·,nbsp:_
 let &colorcolumn=join(range(91,999),",")
 
+let mapleader=","
+noremap \ ,
+
 let g:dotfilesPath  = '~/dotfiles/'
 let g:vimrcBundles  = g:dotfilesPath . 'vimrc.bundles'
 let g:vimrcAugroups = g:dotfilesPath . 'vimrc.augroups'
