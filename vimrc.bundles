@@ -36,6 +36,10 @@ Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-haml'
 
+" Database support
+
+Plug 'vim-scripts/dbext.vim'
+
 " Ruby / Rails
 
 Plug 'tpope/vim-bundler'
