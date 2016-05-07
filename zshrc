@@ -43,6 +43,8 @@ alias gpr="hub pull-request"
 alias grl="git rebase -i head~`(git le head --not master | wc -l | awk '{print $1}')`"
 alias grm="git rebase master"
 alias gs="git s"
+alias gdf="git diff"
+alias gdc="git diff --cached"
 
 alias ntb="cd ~/projects/NTBackend"
 alias ntf="cd ~/projects/NTFrontend"
