@@ -5,6 +5,7 @@ set hidden
 set smartindent autoindent
 set tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 set number
+set relativenumber
 set nowrap
 set hls
 set mouse=a
