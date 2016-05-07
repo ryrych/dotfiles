@@ -173,6 +173,8 @@ syntax on
 filetype on
 filetype plugin on
 filetype indent on
+
+" enable Vim built-in plugin for enhanced `%` command jump
 runtime macros/matchit.vim
 
 " Colors
