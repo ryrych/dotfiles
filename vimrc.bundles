@@ -102,6 +102,6 @@ Plug 'tpope/vim-dispatch'
 "Neovim only
 Plug 'janko-m/vim-test'
 Plug 'kassio/neoterm'
-" Plug 'benekastah/neomake'
+Plug 'benekastah/neomake'
 
 call plug#end()
