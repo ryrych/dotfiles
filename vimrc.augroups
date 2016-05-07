@@ -72,3 +72,5 @@ augroup Yaml
   au!
   au FileType yaml setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
 augroup END
+
+autocmd! BufWritePost * Neomake
