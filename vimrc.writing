@@ -43,7 +43,7 @@ function! SetupProtip()
     :let l:protipTemplatePath = '~/projects/ryrych_blog/protip-template.md'
     :let l:newProtipPath      = '~/projects/ryrych_blog/_drafts/' . strftime("%Y-%m-%d") . "-protip.md"
     :exe 'edit ' . l:newProtipPath
-    :exe 'read ' . l:protipTemplatePath
+    :exe '0read ' . l:protipTemplatePath
     :call SetupWriting()
     :Goyo
     :!open http://localhost:4000
