@@ -32,10 +32,14 @@ function! SetupWriting()
     au FileType markdown nmap <leader>ft :call Formd("-f")<CR>
 endfunction
 
+command SetupWriting :call SetupWriting()
+
 function! SetupWritingPL()
     :setlocal spell spelllang=pl
     :nnoremap <silent> <leader>qpl :call textobj#quote#init({ 'double':'„”', 'single':'‚’' })<cr>
 endfunction
+
+command SetupWritingPL :call SetupWritingPL()
 
 function! SetupProtip()
     " start measuing time
@@ -48,6 +52,8 @@ function! SetupProtip()
     :Goyo
     :!open http://localhost:4000
 endfunction
+
+command SetupProtip :call SetupProtip()
 
 function! MakeProtipUrl()
     :let l:protipUrl = tolower(@t)
@@ -63,6 +69,8 @@ function! MakeProtipUrl()
     " fnamemodify( {fname}, {mods})	String	modify file name
 endfunction
 
+command MakeProtipUrl :call MakeProtipUrl()
+
 function! PublishProtip()
     :3s/new_title/\=@t
     :Gw
@@ -77,8 +85,12 @@ function! PublishProtip()
     " stop measuing time
 endfunction
 
+command PublishProtip :call PublishProtip()
+
 function! ReplaceKbd()
     " <k>Ctrl</k> => <kbd>Ctrl</kbd
     :%s/<k>/<kbd>/g
     :%s/<\/k>/<\/kbd>/g
 endfunction
+
+command ReplaceKbd :call ReplaceKbd()
