@@ -298,3 +298,6 @@ nnoremap Q <nop>
 
 " SuperTab
 let g:SuperTabDefaultCompletionType = "<c-x><c-u>"
+
+let g:pencil#conceallevel = 0     " 0=disable, 1=onechar, 2=hidechar, 3=hideall (def)
+let g:pencil#concealcursor = 'c'  " n=normal, v=visual, i=insert, c=command (def)
