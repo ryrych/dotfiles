@@ -12,6 +12,8 @@ function! Formd(option)
     :call winrestview(save_view)
 endfunction
 
+command Formd :call Formd("-f")
+
 function! SetupWriting()
     setlocal spell spelllang=en
     setlocal wrap linebreak nolist
@@ -26,10 +28,6 @@ function! SetupWriting()
     map <silent> <leader>qc <Plug>ReplaceWithCurly
     map <silent> <leader>qs <Plug>ReplaceWithStraight
     map <leader>g :Goyo<CR>:GitGutterEnable<CR>
-
-    au FileType markdown nmap <leader>fr :call Formd("-r")<CR>
-    au FileType markdown nmap <leader>fi :call Formd("-i")<CR>
-    au FileType markdown nmap <leader>ft :call Formd("-f")<CR>
 endfunction
 
 command SetupWriting :call SetupWriting()
