@@ -19,8 +19,8 @@ augroup Pencil
   au FileType markdown,mkd call textobj#quote#init()
   au FileType markdown,mkd call lexical#init()
 
-  au FileType markdown,text map <silent> <leader>qc <Plug>ReplaceWithCurly
-  au FileType markdown,text map <silent> <leader>qs <Plug>ReplaceWithStraight
+  au FileType markdown,mkd map <silent> <leader>qc <Plug>ReplaceWithCurly
+  au FileType markdown,mkd map <silent> <leader>qs <Plug>ReplaceWithStraight
 augroup END
 
 " Lispy identifiers support
