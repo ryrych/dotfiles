@@ -39,6 +39,7 @@ alias tmux="TERM=screen-256color-bce tmux"
 
 # git aliases
 
+alias gbc="git_current_branch"
 alias gcoo="git checkout --ours"
 alias gcot="git checkout --theirs"
 alias ggfpush='git push --force-with-lease origin $(git_current_branch)'
