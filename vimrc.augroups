@@ -15,6 +15,7 @@ augroup END
 
 augroup Pencil
   au!
+  au FileType markdown,mkd call pencil#init()
   au FileType markdown,mkd call textobj#quote#init()
   au FileType markdown,mkd call lexical#init()
 
