@@ -38,6 +38,7 @@ function! SetupWritingPL()
 endfunction
 
 function! SetupProtip()
+    " start measuing time
     :setlocal spell spelllang=en
     :let l:protipTemplatePath = '~/projects/ryrych_blog/protip-template.md'
     :let l:newProtipPath      = '~/projects/ryrych_blog/_drafts/' . strftime("%Y-%m-%d") . "-protip.md"
@@ -49,7 +50,31 @@ function! SetupProtip()
 endfunction
 
 function! MakeProtipUrl()
-    :source ~/projects/ryrych_blog/make_url.vim
+    :let l:protipUrl = tolower(@t)
+    :let l:protipUrl = substitute(l:protipUrl, "[\*\`\.\?\:]*", '', 'g')
+    :let l:protipUrl = substitute(l:protipUrl, "[~ ]", '-', 'g')
+    :let l:protipUrl = strftime("%Y-%m-%d") . "-" . l:protipUrl . '.md'
+
+    :let l:protipBlogUrl = substitute(l:protipUrl, "\.md", "", '')
+    :let l:protipBlogUrl = "http://ryrych.pl/protips/" . l:protipBlogUrl
+
+    :let @u = l:protipUrl
+    :let @h = l:protipBlogUrl
+    " fnamemodify( {fname}, {mods})	String	modify file name
+endfunction
+
+function! PublishProtip()
+    :3s/new_title/\=@t
+    :Gw
+    :echo system("git ci ". '-m ' . string(@t))
+    :!git push origin master
+    :PosttoTwitter
+
+    " _protips/2016-05-11-setting-mark-points-in-vim.md
+    " http://ryrych.pl/protips/2016-05-11-setting-mark-points-in-vim/
+
+    " twit title + url based on that from reg "t(http://vimawesome.com/plugin/twitvim)
+    " stop measuing time
 endfunction
 
 function! ReplaceKbd()
