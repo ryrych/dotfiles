@@ -1,6 +1,8 @@
 # Path to your oh-my-zsh installation.
 export ZSH=/Users/wojtekryrych/.oh-my-zsh
 export EDITOR='nvim'
+export KEYTIMEOUT=1
+bindkey -v
 
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
@@ -18,7 +20,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git git-prompt gitignore.plugin)
+plugins=(git git-prompt gitignore.plugin zsh-syntax-highlighting z)
 
 # User configuration
 
@@ -41,6 +43,9 @@ alias ggfpush='git push --force-with-lease origin $(git_current_branch)'
 alias git=hub
 alias gpr="hub pull-request"
 alias grl="git rebase -i head~`(git le head --not master | wc -l | awk '{print $1}')`"
+alias gle="git log --oneline --decorate"
+# remaps git branch to g co --
+alias gb="git checkout -"
 
 # git head behind
 # The number of commits that are not in remote tracking branch
