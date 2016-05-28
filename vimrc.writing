@@ -54,7 +54,6 @@ function! MakeProtipUrl()
     :let l:protipBlogUrl = substitute(l:protipUrl, "\.md", "", '')
     :let l:protipBlogUrl = "http://ryrych.pl/protips/" . l:protipBlogUrl
 
-    :let @u = l:protipUrl
     :let @h = l:protipBlogUrl
     " fnamemodify( {fname}, {mods})	String	modify file name
 endfunction
