@@ -46,10 +46,10 @@ endfunction
 command SetupProtip :call SetupProtip()
 
 function! MakeProtipUrl()
-    :let l:protipUrl = tolower(@t)
-    :let l:protipUrl = substitute(l:protipUrl, "[\*\`\.\?\:]*", '', 'g')
-    :let l:protipUrl = substitute(l:protipUrl, "[~ ]", '-', 'g')
-    :let l:protipUrl = strftime("%Y-%m-%d") . "-" . l:protipUrl . '.md'
+    :let g:protipUrl = tolower(@t)
+    :let g:protipUrl = substitute(l:protipUrl, "[\*\`\.\?\:]*", '', 'g')
+    :let g:protipUrl = substitute(l:protipUrl, "[~ ]", '-', 'g')
+    :let g:protipUrl = strftime("%Y-%m-%d") . "-" . l:protipUrl . '.md'
 
     :let l:protipBlogUrl = substitute(l:protipUrl, "\.md", "", '')
     :let l:protipBlogUrl = "http://ryrych.pl/protips/" . l:protipBlogUrl
