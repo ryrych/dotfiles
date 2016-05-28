@@ -33,6 +33,9 @@ source ~/.local/bin/tmuxinator.zsh
 
 alias aliasall="{ alias; git aliases; } | sort"
 alias bower='noglob bower' # Fixes zsh: `no matches found: package-at-version#2.3.4`
+alias ntb="cd ~/projects/NTBackend"
+alias ntf="cd ~/projects/NTFrontend"
+alias tmux="TERM=screen-256color-bce tmux"
 
 # git aliases
 
@@ -55,10 +58,6 @@ alias grm="git rebase master"
 alias gs="git s"
 alias gdf="git diff"
 alias gdc="git diff --cached"
-
-alias ntb="cd ~/projects/NTBackend"
-alias ntf="cd ~/projects/NTFrontend"
-alias tmux="TERM=screen-256color-bce tmux"
 
 # rails aliases
 
