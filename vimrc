@@ -107,6 +107,9 @@ nnoremap <silent> "" :registers "0123456789abcdefghijklmnopqrstuvwxyz*+.:<CR>
 noremap <leader>y "*y
 noremap <leader>yy "*Y
 
+" Paste mode
+set pastetoggle=<F5>
+
 " Toggle wrapping
 nnoremap <silent><Leader>w :if &wrap <bar> set nowrap <bar> else <bar> set wrap <bar> endif<CR>
 
