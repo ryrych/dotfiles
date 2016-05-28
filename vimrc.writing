@@ -20,7 +20,6 @@ function! SetupWriting()
     setlocal textwidth=0 wrapmargin=0
     setlocal formatoptions-=t
 
-    call textobj#quote#init()
     map <silent> <leader>qc <Plug>ReplaceWithCurly
     map <silent> <leader>qs <Plug>ReplaceWithStraight
     map <leader>g :Goyo<CR>:GitGutterEnable<CR>
