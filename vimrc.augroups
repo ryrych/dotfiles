@@ -74,3 +74,5 @@ augroup Yaml
 augroup END
 
 autocmd! BufWritePost * Neomake
+
+autocmd FileType typescript setlocal completeopt+=menu,preview
