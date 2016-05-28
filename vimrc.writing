@@ -19,7 +19,6 @@ function! SetupWriting()
     setlocal wrap linebreak nolist
     setlocal textwidth=0 wrapmargin=0
     setlocal formatoptions-=t
-    set formatprg=par\ -w90
 
     call textobj#quote#init()
     map <silent> <leader>qc <Plug>ReplaceWithCurly
