@@ -33,7 +33,6 @@ source ~/.local/bin/tmuxinator.zsh
 
 alias aliasall="{ alias; git aliases; } | sort"
 alias bower='noglob bower' # Fixes zsh: `no matches found: package-at-version#2.3.4`
-alias ctg="ctags -R --languages=ruby --exclude=.git --exclude=log . $(bundle list --paths) 2>/dev/null"
 
 # git aliases
 
