@@ -98,6 +98,7 @@ Plug 'haya14busa/vim-operator-flashy'
 Plug 'tpope/vim-abolish'
 Plug 'tpope/vim-characterize'
 Plug 'tpope/vim-dispatch'
+Plug 'twitvim/twitvim'
 
 "Neovim only
 Plug 'janko-m/vim-test'
