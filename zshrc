@@ -61,6 +61,14 @@ alias ntb="cd ~/projects/NTBackend"
 alias ntf="cd ~/projects/NTFrontend"
 alias tmux="TERM=screen-256color-bce tmux"
 
+# rails aliases
+
+alias rc="rails console"
+alias rdc="rake db:create"
+alias rdd="rake db:drop"
+alias rdm="rake db:migrate"
+alias rs="rails server"
+
 PATH=/usr/local/bin:$PATH:$HOME/.rvm/bin:$HOME/.local/bin # Add RVM to PATH for scripting
 export PATH=./node_modules/.bin:$PATH
 
