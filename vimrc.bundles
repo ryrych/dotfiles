@@ -91,6 +91,7 @@ Plug 'tpope/vim-unimpaired'
 Plug 'nelstrom/vim-qargs'
 Plug 'tpope/vim-repeat'
 Plug 'rking/ag.vim'
+Plug 'tpope/vim-eunuch'
 
 " Themes / colours
 Plug 'NLKNguyen/papercolor-theme'
