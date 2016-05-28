@@ -49,7 +49,7 @@ function! MakeProtipUrl()
     :let g:protipUrl = tolower(@t)
     :let g:protipUrl = substitute(l:protipUrl, "[\*\`\.\?\:]*", '', 'g')
     :let g:protipUrl = substitute(l:protipUrl, "[~ ]", '-', 'g')
-    :let g:protipUrl = strftime("%Y-%m-%d") . "-" . l:protipUrl . '.md'
+    :let g:protipUrl = '~/projects/ryrych_blog/_protips/' . strftime("%Y-%m-%d") . "-" . g:protipUrl . '.md'
 
     :let l:protipBlogUrl = substitute(l:protipUrl, "\.md", "", '')
     :let l:protipBlogUrl = "http://ryrych.pl/protips/" . l:protipBlogUrl
