@@ -21,9 +21,6 @@ function! SetupWriting()
     setlocal formatoptions-=t
     set formatprg=par\ -w90
 
-    " if does not work try :PencilSoft
-    call pencil#init({'wrap': 'soft'})
-
     call textobj#quote#init()
     map <silent> <leader>qc <Plug>ReplaceWithCurly
     map <silent> <leader>qs <Plug>ReplaceWithStraight
