@@ -11,12 +11,15 @@ augroup Text
   au FileType markdown setlocal wrap linebreak
   au FileType markdown,text,gitcommit setlocal complete+=k infercase
   au FileType markdown,text,gitcommit setlocal isk-=-
+augroup END
 
-  au FileType markdown,text call textobj#quote#init()
+augroup Pencil
+  au!
+  au FileType markdown,mkd call textobj#quote#init()
+  au FileType markdown,mkd call lexical#init()
+
   au FileType markdown,text map <silent> <leader>qc <Plug>ReplaceWithCurly
   au FileType markdown,text map <silent> <leader>qs <Plug>ReplaceWithStraight
-
-  au FileType markdown call lexical#init()
 augroup END
 
 " Lispy identifiers support
