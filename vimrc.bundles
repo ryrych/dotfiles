@@ -109,4 +109,5 @@ Plug 'janko-m/vim-test'
 Plug 'kassio/neoterm'
 Plug 'benekastah/neomake'
 
+Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 call plug#end()
