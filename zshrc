@@ -39,26 +39,24 @@ alias tmux="TERM=screen-256color-bce tmux"
 
 # git aliases
 
+# remaps git branch to g co --
+alias gb="git checkout -"
 alias gbc="git_current_branch"
 alias gcoo="git checkout --ours"
 alias gcot="git checkout --theirs"
+alias gdc="git diff --cached"
+alias gdf="git diff"
 alias ggfpush='git push --force-with-lease origin $(git_current_branch)'
-alias git=hub
-alias gpr="hub pull-request"
-alias grl="git rebase -i head~`(git le head --not master | wc -l | awk '{print $1}')`"
-alias gle="git log --oneline --decorate"
-# remaps git branch to g co --
-alias gb="git checkout -"
-
 # git head behind
 # The number of commits that are not in remote tracking branch
 # Helpful when reviewing commits in reverse order before push
 alias ghb="git le head --not origin/$(git_current_branch) | wc -l | awk '{ print $1 }'"
-
+alias git=hub
+alias gle="git log --oneline --decorate"
+alias gpr="hub pull-request"
+alias grl="git rebase -i head~`(git le head --not master | wc -l | awk '{print $1}')`"
 alias grm="git rebase master"
 alias gs="git s"
-alias gdf="git diff"
-alias gdc="git diff --cached"
 
 # rails aliases
 
