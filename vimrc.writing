@@ -61,6 +61,7 @@ command MakeProtipUrl :call MakeProtipUrl()
 
 function! PublishProtip()
     :3s/new_title/\=@t
+    :call RenameFile(g:protipUrl)
     :Gw
     :echo system("git ci ". '-m ' . string(@t))
     :!git push origin master
