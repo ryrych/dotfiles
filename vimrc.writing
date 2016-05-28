@@ -33,7 +33,6 @@ command SetupWritingPL :call SetupWritingPL()
 
 function! SetupProtip()
     " start measuing time
-    :setlocal spell spelllang=en
     :let l:protipTemplatePath = '~/projects/ryrych_blog/protip-template.md'
     :let l:newProtipPath      = '~/projects/ryrych_blog/_drafts/' . strftime("%Y-%m-%d") . "-protip.md"
     :exe 'edit ' . l:newProtipPath
