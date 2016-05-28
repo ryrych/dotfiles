@@ -42,6 +42,7 @@ alias tmux="TERM=screen-256color-bce tmux"
 # remaps git branch to g co --
 alias gb="git checkout -"
 alias gbc="git_current_branch"
+alias gbcopy="git branch --move $(git_current_branch)-copy && git reset --hard origin/master"
 alias gcoo="git checkout --ours"
 alias gcot="git checkout --theirs"
 alias gdc="git diff --cached"
