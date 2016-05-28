@@ -1,19 +1,14 @@
 " General options
 set shell=/bin/zsh
-set nocompatible
 set hidden
-set smartindent autoindent
+set smartindent
 set tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 set number
 set relativenumber
 set nowrap
 set hls
-set mouse=a
-set autoread
-set backspace=indent,eol,start
 set shortmess+=I
 set timeout timeoutlen=3000 ttimeoutlen=10
-set laststatus=2
 
 if !has('nvim')
     set ttymouse=xterm2
@@ -63,11 +58,9 @@ set secure
 " Search
 set ignorecase
 set smartcase
-set incsearch
 set noinfercase
 
 " Command line
-set history=1000
 cnoremap <C-a> <Home>
 cnoremap <C-e> <End>
 cnoremap <C-p> <Up>
@@ -155,7 +148,6 @@ cnoremap <expr> %% getcmdtype() == ':' ? expand('%:h').'/' : '%%'
 set fileencoding=utf-8
 " set fileencodings=utf-8
 set termencoding=utf-8
-set encoding=utf-8
 
 " Ignore list
 set wildignore=.git,.svn,CVS,*.o,*.a,*.class,*.mo,*.la,*.so,*.obj,*.swp,*.jpg,*.png,*.xpm,*.gif,*.pyc,tags,*.tags
@@ -281,9 +273,6 @@ let g:vim_tags_use_language_field = 1
 if has("nvim")
   " change cursor to bar in insert mode
   let $NVIM_TUI_ENABLE_CURSOR_SHAPE=1
-
-  " disable mouse support, what am I a vimposer?
-  set mouse-=a
 
   " run tests with :T
   let test#strategy = "neoterm"
