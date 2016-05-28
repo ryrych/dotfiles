@@ -36,6 +36,10 @@ Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-haml'
 
+Plug 'Quramy/tsuquyomi'
+Plug 'leafgarland/typescript-vim'
+Plug 'Shougo/vimproc.vim'
+
 " Database support
 
 Plug 'vim-scripts/dbext.vim'
