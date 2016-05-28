@@ -71,6 +71,7 @@ function! PublishProtip()
 
     " twit title + url based on that from reg "t(http://vimawesome.com/plugin/twitvim)
     " stop measuing time
+    :!git stash pop
 endfunction
 
 command PublishProtip :call PublishProtip()
