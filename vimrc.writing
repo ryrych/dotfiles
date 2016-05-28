@@ -89,8 +89,8 @@ command PublishProtip :call PublishProtip()
 
 function! ReplaceKbd()
     " <k>Ctrl</k> => <kbd>Ctrl</kbd>
-    :%s/<k>/<kbd>/g
-    :%s/<\/k>/<\/kbd>/g
+    :%s/<k>/<kbd>/ge
+    :%s/<\/k>/<\/kbd>/ge
 endfunction
 
 command ReplaceKbd :call ReplaceKbd()
