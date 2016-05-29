@@ -33,7 +33,7 @@ endfunction
 command SetupWritingPL :call SetupWritingPL()
 
 function! SetupProtip()
-    let l:start_time = localtime()
+    :let g:start_time = localtime()
     :!git stash save -u 'before protips is published'
     :let l:protipTemplatePath = '~/projects/ryrych_blog/protip-template.md'
     :let l:newProtipPath      = '~/projects/ryrych_blog/_drafts/' . strftime("%Y-%m-%d") . "-protip.md"
