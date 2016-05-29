@@ -36,9 +36,10 @@ function! SetupProtip()
     :!git stash save -u 'before protips is published'
 
     :let g:start_time         = localtime()
+    :let g:protipDate         = strftime("%Y-%m-%d")
     :let g:blogPath           = '~/projects/ryrych_blog/'
     :let l:protipTemplatePath = g:blogPath . 'protip-template.md'
-    :let l:newProtipPath      = g:blogPath . '_drafts/' . strftime("%Y-%m-%d") . "-protip.md"
+    :let l:newProtipPath      = g:blogPath . '_drafts/' . g:protipDate . "-protip.md"
 
     :exe 'edit ' . l:newProtipPath
     :exe '0read ' . l:protipTemplatePath
@@ -53,7 +54,8 @@ function! MakeProtipUrl()
     :let g:newProtipFileName = tolower(@t)
     :let g:newProtipFileName = substitute(g:newProtipFileName, "[\*\`\.\?\:]*", '', 'g')
     :let g:newProtipFileName = substitute(g:newProtipFileName, "[~ ]", '-', 'g')
-    :let g:protipUrl         = g:blogPath . '_protips/' . strftime("%Y-%m-%d") . "-" . g:newProtipFileName . '.md'
+    :let g:newProtipFileName = g:protipDate . '-' . g:newProtipFileName
+    :let g:protipUrl         = g:blogPath . '_protips/' . g:newProtipFileName . '.md'
     :let l:protipBlogUrl     = "http://ryrych.pl/protips/" . g:newProtipFileName
     :let @h                  = l:protipBlogUrl
 endfunction
