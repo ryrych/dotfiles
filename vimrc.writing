@@ -61,7 +61,7 @@ endfunction
 command MakeProtipUrl :call MakeProtipUrl()
 
 function! PublishProtip()
-    :3s/new_title/\=@t
+    :3s/new_title/\=@t/e
     :call ReplaceKbd()
     :call RenameFile(g:protipUrl)
     let l:end_time = localtime()
