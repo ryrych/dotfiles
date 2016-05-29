@@ -16,6 +16,7 @@ command Formd :call Formd("-f")
 
 function! SetupWriting()
     setlocal spell spelllang=en
+    setlocal nospell
     setlocal wrap linebreak nolist
     setlocal textwidth=0 wrapmargin=0
     setlocal formatoptions-=t
