@@ -56,6 +56,8 @@ alias ghb="git le head --not origin/$(git_current_branch) | wc -l | awk '{ print
 alias git=hub
 alias gle="git log --oneline --decorate"
 alias gpr="hub pull-request"
+# git review master
+alias grevm="git log --oneline --decorate --no-merges origin/master --not master"
 alias grl="git rebase -i head~`(git le head --not master | wc -l | awk '{print $1}')`"
 alias grm="git rebase master"
 alias gs="git s"
