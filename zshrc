@@ -52,7 +52,7 @@ alias ggfpush='git push --force-with-lease origin $(git_current_branch)'
 # git head behind
 # The number of commits that are not in remote tracking branch
 # Helpful when reviewing commits in reverse order before push
-alias ghb="git le head --not origin/$(git_current_branch) | wc -l | awk '{ print $1 }'"
+alias ghb="git le head --not origin/$(git_current_branch) | wc -l | tr -d ' '"
 alias git=hub
 alias gle="git log --oneline --decorate"
 alias gpr="hub pull-request"
