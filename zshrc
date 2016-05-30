@@ -36,6 +36,7 @@ alias bower='noglob bower' # Fixes zsh: `no matches found: package-at-version#2.
 alias ntb="cd ~/projects/NTBackend"
 alias ntf="cd ~/projects/NTFrontend"
 alias tmux="TERM=screen-256color-bce tmux"
+alias es="ember server -e rails"
 
 # git aliases
 
