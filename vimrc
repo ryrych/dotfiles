@@ -4,7 +4,6 @@ set hidden
 set smartindent
 set tabstop=4 shiftwidth=4 softtabstop=4 expandtab
 set number
-set relativenumber
 set nowrap
 set hls
 set shortmess+=I
