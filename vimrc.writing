@@ -67,7 +67,8 @@ function! PublishProtip()
     :call ReplaceKbd()
     :call RenameFile(g:protipUrl)
     let l:end_time = localtime()
-    let time_spent = append(line('$'), end_time - g:start_time . ' seconds')
+    let time_spent = append(line('$'), 'This protip has been written in ' . ( end_time - g:start_time ) . ' seconds')
+
     :Gw
     :echo system("git ci ". '-m ' . string(@t))
     :!git push origin master
