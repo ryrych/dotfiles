@@ -75,3 +75,6 @@ augroup END
 autocmd! BufWritePost * Neomake
 
 autocmd FileType typescript setlocal completeopt+=menu,preview
+
+" ruby augroup is not run
+au BufNewFile,BufRead *.html.haml set filetype=haml
