@@ -29,7 +29,6 @@ Plug 'vim-scripts/indenthtml.vim'
 " Syntax highlighting / Linting tools
 Plug 'Shutnik/jshint2.vim'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'isRuslan/vim-es6'
 Plug 'kchmck/vim-coffee-script'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'pangloss/vim-javascript'
@@ -37,7 +36,6 @@ Plug 'scrooloose/syntastic'
 Plug 'tpope/vim-haml'
 
 Plug 'Quramy/tsuquyomi'
-Plug 'leafgarland/typescript-vim'
 Plug 'Shougo/vimproc.vim'
 
 " Database support
