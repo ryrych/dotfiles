@@ -195,9 +195,6 @@ let g:lexical#thesaurus = ['~/.vim/thesaurus/mthesaur.txt',]
 " MacDict.vim
 map <leader>d "dyiw:call MacDict(@d)<CR>
 
-" Tagbar
-nmap <silent><F8> :TagbarToggle<CR>
-
 " Maximizer
 let g:maximizer_set_mapping_with_bang = 1
 
