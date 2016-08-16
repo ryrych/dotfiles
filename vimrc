@@ -191,8 +191,6 @@ nnoremap <silent> <leader>gt :TestVisit<CR>
 let g:lexical#spelllang = ['en_us', 'en_gb', 'pl',]
 let g:lexical#thesaurus = ['~/.vim/thesaurus/mthesaur.txt',]
 
-" vim-markdown
-map <Plug> <Plug>Markdown_MoveToCurHeader
 
 " MacDict.vim
 map <leader>d "dyiw:call MacDict(@d)<CR>
