@@ -2,7 +2,7 @@
 set shell=/bin/zsh
 set hidden
 set smartindent
-set tabstop=4 shiftwidth=4 softtabstop=4 expandtab
+set tabstop=2 shiftwidth=2 softtabstop=2 expandtab
 set number
 set nowrap
 set hls
