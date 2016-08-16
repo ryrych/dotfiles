@@ -93,7 +93,6 @@ Plug 'tpope/vim-eunuch'
 
 " Themes / colours
 Plug 'NLKNguyen/papercolor-theme'
-Plug 'gorodinskiy/vim-coloresque'
 
 " Other
 Plug 'kana/vim-operator-user'
