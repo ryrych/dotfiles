@@ -66,6 +66,7 @@ alias gs="git status -s"
 alias rc="rails console"
 alias rdc="rake db:create"
 alias rdd="rake db:drop"
+alias rds="rake db:seed"
 alias rdm="rake db:migrate"
 alias rs="rails server"
 
