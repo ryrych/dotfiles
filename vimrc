@@ -305,3 +305,7 @@ nmap <C-i> <C-i>zz
 " Twitvim
 let twitvim_enable_python3 = 1
 let twitvim_browser_cmd = 'open'
+
+if filereadable(expand("./vimrc.local"))
+  source ./vimrc.local
+endif
