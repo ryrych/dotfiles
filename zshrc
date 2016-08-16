@@ -70,6 +70,8 @@ alias rds="rake db:seed"
 alias rdm="rake db:migrate"
 alias rs="rails server"
 
+setopt no_global_rcs
+
 PATH=/usr/local/bin:$PATH:$HOME/.rvm/bin:$HOME/.local/bin # Add RVM to PATH for scripting
 export PATH=./node_modules/.bin:$PATH
 
