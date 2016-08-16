@@ -1,10 +1,28 @@
-LineLength:
-  Enabled: false
-
-StringLiterals:
-  Enabled: false # because "" is better than '' https://github.com/styleguide/ruby
-
-MethodLength:
+Rails:
   Enabled: true
-  CountComments: false
-  Max: 25
+AllCops:
+  TargetRubyVersion: 2.2
+  Include:
+    - '**/Gemfile'
+    - '**/Rakefile'
+  Exclude:
+   - 'bin/*'
+   - 'app/serializers/*'
+   - 'db/seeds.rb'
+   - 'db/migrate/*'
+   - 'db/schema.rb'
+   - 'vendor/bundle/**/*'
+Documentation:
+  Enabled: false
+Metrics/LineLength:
+  Max: 120
+Style/CaseIndentation:
+  Enabled: false
+Style/StructInheritance:
+  Enabled: false
+Style/ClassAndModuleChildren:
+  Enabled: false
+Rails/HasAndBelongsToMany:
+  Enabled: false
+ClassLength:
+  Max: 250
