@@ -59,7 +59,7 @@ alias gpr="hub pull-request"
 alias grevm="git log --oneline --decorate --no-merges origin/master --not master"
 alias grl="git rebase -i head~`(git le head --not master | wc -l | awk '{print $1}')`"
 alias grm="git rebase master"
-alias gs="git s"
+alias gs="git status -s"
 
 # rails aliases
 
