@@ -86,4 +86,6 @@ export NVM_DIR="${HOME}/.nvm"
 
 eval "$(thefuck --alias kuzwa)"
 
+source ~/.iterm2_shell_integration.`basename $SHELL`
+
 source $ZSH_CUSTOM/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
