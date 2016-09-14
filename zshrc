@@ -1,5 +1,6 @@
 # Path to your oh-my-zsh installation.
-export ZSH=/Users/wojtekryrych/.oh-my-zsh
+export ZSH=${HOME}/.oh-my-zsh
+export ZSH_CUSTOM=${ZSH}/custom/plugins
 export EDITOR='nvim'
 export KEYTIMEOUT=1
 bindkey -v
@@ -75,7 +76,7 @@ setopt no_global_rcs
 PATH=/usr/local/bin:$PATH:$HOME/.rvm/bin:$HOME/.local/bin # Add RVM to PATH for scripting
 export PATH=./node_modules/.bin:$PATH
 
-export NVM_DIR="/Users/wojtekryrych/.nvm"
+export NVM_DIR="${HOME}/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
 
 # added by travis gem
