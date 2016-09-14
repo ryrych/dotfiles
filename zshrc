@@ -21,7 +21,7 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(git jira zsh-syntax-highlighting)
 # User configuration
 
 source $ZSH/oh-my-zsh.sh
@@ -83,3 +83,5 @@ export NVM_DIR="${HOME}/.nvm"
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 
 eval "$(thefuck --alias kuzwa)"
+
+source $ZSH_CUSTOM/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
