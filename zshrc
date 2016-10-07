@@ -61,6 +61,8 @@ alias gle="git log --oneline --decorate"
 alias gpr="hub pull-request"
 # git review master
 alias grevm="git log --oneline --decorate --no-merges origin/master --not master --author='^((?!wojtek).*)$'"
+# git versions behind
+alias gvb="git le $(git describe --abbrev=0 --tags)..head --merges"
 alias grl="git rebase -i head~`(git le head --not master | wc -l | awk '{print $1}')`"
 alias grc="git rebase --continue"
 alias grm="git rebase master"
