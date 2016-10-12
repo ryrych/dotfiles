@@ -42,31 +42,51 @@ alias es="ember server -e rails"
 
 # git aliases
 
-# remaps git branch to g co --
+alias git=hub
+
+alias gs="git status -s"
+
+alias gsh="git show --color-words"
+
 alias gb="git checkout -"
-alias gbc="git_current_branch"
-alias gbcopy="git branch --move $(git_current_branch)-copy && git reset --hard origin/master"
-alias gu="git reset --hard"
+alias gccm="git checkout ${CURRENT_MASTER}"
 alias gcoo="git checkout --ours"
 alias gcot="git checkout --theirs"
+
+alias gr1="git reset HEAD^"
+alias gr1="git reset HEAD^^"
+alias gr="git reset"
+alias grh1="git reset --hard HEAD^"
+alias grh1="git reset --hard HEAD^^"
+alias gu="git reset --hard"
+alias gunstage="git reset HEAD"
+
+alias grc="git rebase --continue"
+alias grcm="git rebase ${CURRENT_MASTER}"
+alias grl="git rebase -i head~`(git log --oneline head --not master | wc -l | awk '{print $1}')`"
+alias grm="git rebase master"
+
 alias gdc="git diff --cached"
 alias gdf="git diff"
-alias ggfpush='git push --force-with-lease origin $(git_current_branch)'
+
 # git head behind
-# The number of commits that are not in remote tracking branch
-# Helpful when reviewing commits in reverse order before push
-alias ghb="git le head --not origin/$(git_current_branch) | wc -l | tr -d ' '"
-alias git=hub
+alias ghb="git log --oneline --decorate head --not origin/$(git_current_branch) | wc -l | tr -d ' '"
 alias gle="git log --oneline --decorate"
-alias gpr="hub pull-request"
+alias gll="git log --pretty=format:'%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]' --decorate --numstat"
 # git review master
 alias grevm="git log --oneline --decorate --no-merges origin/master --not master --author='^((?!wojtek).*)$'"
 # git versions behind
-alias gvb="git le $(git describe --abbrev=0 --tags)..head --merges"
-alias grl="git rebase -i head~`(git le head --not master | wc -l | awk '{print $1}')`"
-alias grc="git rebase --continue"
-alias grm="git rebase master"
-alias gs="git status -s"
+alias gvb="git log --oneline --decorate $(git describe --abbrev=0 --tags)..head --merges"
+
+alias gbcopy="git branch --move $(git_current_branch)-copy && git reset --hard origin/master"
+alias ggfpush='git push --force-with-lease origin $(git_current_branch)'
+# The number of commits that are not in remote tracking branch
+# Helpful when reviewing commits in reverse order before push
+alias grevcm="git log --oneline --decorate --no-merges origin/${CURRENT_MASTER} --not ${CURRENT_MASTER} --author='^((?!wojtek).*)$'"
+
+alias gbc="git_current_branch"
+alias gpr="hub pull-request"
+alias lasttag="git describe --tags --abbrev=0"
 
 # rails aliases
 
