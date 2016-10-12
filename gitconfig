@@ -1,26 +1,35 @@
 [color]
-	ui = auto
+  ui = auto
+
 [core]
-    autocrlf = input
-	editor = nvim -f
+  autocrlf = input
+  editor = nvim -f
+
 [github]
-	user = wryrych
+  user = wryrych
+
 [merge]
-	conflictstyle = diff3
-    ff = only
-	tool = opendiff
+  conflictstyle = diff3
+  ff = only
+  tool = opendiff
+
 [pull]
-    rebase = true
+  rebase = true
+
 [push]
-	default = simple
+  default = simple
+
 [rebase]
-    autostash = true
-    autosquash = true
+  autostash = true
+  autosquash = true
+
 [rerere]
-    enabled = true
+  enabled = true
+
 [user]
-	email = wojtek.ryrych@gmail.com
-	name = Wojtek Ryrych
+  email = wojtek.ryrych@gmail.com
+  name = Wojtek Ryrych
+
 [alias]
   cp = cherry-pick
   st = status
@@ -41,7 +50,7 @@
   lg = log --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit --date=relative
   who = shortlog -s --
   aliases = !git config --get-regexp 'alias.*' | colrm 1 6 | sed 's/[ ]/ = /'
-  undo=reset --hard
+  undo = reset --hard
   tree = log --oneline --decorate --graph
   ls = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate
   ll = log --pretty=format:"%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]" --decorate --numstat
@@ -78,11 +87,13 @@
   rbm = rebase master
   fe = fetch
   pu = pull
+
 [pager]
-	diff = diff-so-fancy | less --tabs=4 -RFX
-	show = diff-so-fancy | less --tabs=4 -RFX
+  diff = diff-so-fancy | less --tabs=4 -RFX
+  show = diff-so-fancy | less --tabs=4 -RFX
+
 [color "diff-highlight"]
-	oldNormal = red bold
-	oldHighlight = red bold 52
-	newNormal = green bold
-	newHighlight = green bold 22
+  oldNormal = red bold
+  oldHighlight = red bold 52
+  newNormal = green bold
+  newHighlight = green bold 22
