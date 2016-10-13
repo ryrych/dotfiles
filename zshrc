@@ -98,6 +98,8 @@ alias rds="rake db:seed"
 alias rdm="rake db:migrate"
 alias rs="rails server"
 
+alias ctags="`brew --prefix`/bin/ctags"
+
 setopt no_global_rcs
 
 PATH=/usr/local/bin:$PATH:$HOME/.rvm/bin:$HOME/.local/bin # Add RVM to PATH for scripting
