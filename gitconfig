@@ -13,6 +13,9 @@
   ff = only
   tool = opendiff
 
+[grep]
+  patterntype = perl
+
 [pull]
   rebase = true
 
