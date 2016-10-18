@@ -35,6 +35,7 @@ source ~/.local/bin/tmuxinator.zsh
 
 alias aliasall="{ alias; git aliases; } | sort"
 alias bower='noglob bower' # Fixes zsh: `no matches found: package-at-version#2.3.4`
+alias cop="rubocop -a"
 alias ntb="cd ~/projects/NTBackend"
 alias ntf="cd ~/projects/NTFrontend"
 alias tmux="TERM=screen-256color-bce tmux"
