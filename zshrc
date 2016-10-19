@@ -56,7 +56,7 @@ alias gcot="git checkout --theirs"
 alias gcd="git checkout --"
 
 alias gr1="git reset HEAD^"
-alias gr1="git reset HEAD^^"
+alias gr2="git reset HEAD^^"
 alias gr="git reset"
 alias grh="git reset --hard"
 alias grh1="git reset --hard HEAD^"
