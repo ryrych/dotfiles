@@ -90,6 +90,7 @@ alias grevcm="git log --oneline --decorate --no-merges origin/${CURRENT_MASTER} 
 alias gbc="git_current_branch"
 alias gpr="hub pull-request"
 alias lasttag="git describe --tags --abbrev=0"
+alias grlog="git reflog"
 
 # rails aliases
 
