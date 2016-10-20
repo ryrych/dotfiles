@@ -54,6 +54,7 @@ alias gccm="git checkout ${CURRENT_MASTER}"
 alias gcoo="git checkout --ours"
 alias gcot="git checkout --theirs"
 alias gcd="git checkout --"
+alias gcda="git checkout -- ."
 
 alias gr1="git reset HEAD^"
 alias gr2="git reset HEAD^^"
