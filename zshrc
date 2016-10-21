@@ -1,5 +1,3 @@
-[[ -s "$HOME/.rvm/scripts/rvm" ]] && . "$HOME/.rvm/scripts/rvm"
-
 # Path to your oh-my-zsh installation.
 export ZSH=${HOME}/.oh-my-zsh
 export ZSH_CUSTOM=${ZSH}/custom/plugins
@@ -108,7 +106,6 @@ alias dfi="cd ~/dotfiles"
 
 setopt no_global_rcs
 
-PATH=/usr/local/bin:$PATH:$HOME/.rvm/bin:$HOME/.local/bin # Add RVM to PATH for scripting
 export PATH=./node_modules/.bin:$PATH
 
 export NVM_DIR="${HOME}/.nvm"
@@ -122,3 +119,5 @@ eval "$(thefuck --alias kuzwa)"
 source ~/.iterm2_shell_integration.`basename $SHELL`
 
 source $ZSH_CUSTOM/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting

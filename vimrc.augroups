@@ -37,7 +37,6 @@ augroup Ruby
   au FileType ruby,eruby,haml let g:rubycomplete_rails = 1
   au FileType ruby,eruby,haml let g:rubycomplete_classes_in_global = 1
   au FileType ruby,eruby,haml setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
-  au FileType ruby,eruby,haml Rvm
   au FileType ruby setlocal isk-=-
 augroup END
 
