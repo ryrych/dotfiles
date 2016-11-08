@@ -113,12 +113,6 @@ nmap <leader>ti :set list!<CR>
 " Mute highlight search
 nnoremap <space> :nohlsearch<cr>
 
-"Improve window resizing
-nnoremap <silent><Leader>+ :exe "resize " . (winheight(0) * 3/2)<CR>
-nnoremap <silent><Leader>- :exe "resize " . (winheight(0) * 2/3)<CR>
-nnoremap <silent><Leader>> :exe "vertical resize " . (winwidth(0) * 3/2)<CR>
-nnoremap <silent><Leader>< :exe "vertical resize " . (winwidth(0) * 2/3)<CR>
-
 " Open new split panes to right and bottom, which feels more natural
 set splitbelow
 set splitright
