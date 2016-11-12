@@ -6,6 +6,7 @@ call plug#begin('~/.config/nvim/plugged')
 Plug 'szw/vim-ctrlspace'
 Plug 'tpope/vim-vinegar'
 Plug 'szw/vim-maximizer'
+Plug 'szw/vim-smartclose'
 Plug 'majutsushi/tagbar'
 Plug 'ervandew/supertab'
 
