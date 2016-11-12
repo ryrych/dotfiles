@@ -105,6 +105,7 @@ alias ctags="`brew --prefix`/bin/ctags"
 alias dfi="cd ~/dotfiles"
 
 setopt no_global_rcs
+setopt HIST_IGNORE_SPACE
 
 export PATH=./node_modules/.bin:$PATH
 
