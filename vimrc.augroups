@@ -45,11 +45,6 @@ augroup Javascript
   au FileType javascript setlocal omnifunc=javascriptcomplete#CompleteJS tabstop=4 softtabstop=4 shiftwidth=4 expandtab
 augroup END
 
-augroup CoffeeScript
-  au!
-  au FileType coffee setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
-augroup END
-
 augroup Html
   au!
   au FileType html setlocal omnifunc=htmlcomplete#CompleteTags

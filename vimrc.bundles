@@ -30,7 +30,6 @@ Plug 'vim-scripts/indenthtml.vim'
 " Syntax highlighting / Linting tools
 Plug 'Shutnik/jshint2.vim'
 Plug 'editorconfig/editorconfig-vim'
-Plug 'kchmck/vim-coffee-script'
 Plug 'mustache/vim-mustache-handlebars'
 Plug 'pangloss/vim-javascript'
 Plug 'scrooloose/syntastic'

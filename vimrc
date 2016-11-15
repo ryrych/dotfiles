@@ -235,7 +235,7 @@ nmap <Leader>a <Plug>(EasyAlign)
 map <Leader><leader>w <Plug>(easymotion-wl)
 
 " vim-pasta
-let g:pasta_disabled_filetypes = ["python", "coffee", "markdown", "yaml", "slim", "haml"]
+let g:pasta_disabled_filetypes = ["python", "markdown", "yaml", "slim", "haml"]
 
 " expand_region
 call expand_region#custom_text_objects({
