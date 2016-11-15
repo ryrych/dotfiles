@@ -70,7 +70,7 @@ function! PublishProtip()
     let time_spent = append(line('$'), 'This protip has been written in ' . ( end_time - g:start_time ) . ' seconds')
 
     :Gw
-    :echo system("git ci ". '-m ' . string(@t))
+    :echo system("git commit ". '-m ' . string(@t))
     :!git push origin master
     :PosttoTwitter
 
