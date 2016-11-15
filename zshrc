@@ -115,8 +115,6 @@ export NVM_DIR="${HOME}/.nvm"
 # added by travis gem
 [ -f $HOME/.travis/travis.sh ] && source $HOME/.travis/travis.sh
 
-eval "$(thefuck --alias kuzwa)"
-
 source ~/.iterm2_shell_integration.`basename $SHELL`
 
 source $ZSH_CUSTOM/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
