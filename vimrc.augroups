@@ -27,7 +27,7 @@ augroup END
 " https://github.com/szw/vim-kompleter#lispy-identifiers
 augroup LispyIdentifiers
   au!
-  au FileType lisp,clojure,html,xml,xhtml,haml,eruby,css,scss,sass,javascript,coffee setlocal isk+=-
+  au FileType html,xml,xhtml,haml,eruby,css,scss,sass,javascript setlocal isk+=-
 augroup END
 
 augroup Ruby
