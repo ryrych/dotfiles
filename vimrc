@@ -30,7 +30,7 @@ set cursorline
 set textwidth=90
 set clipboard=unnamed
 set listchars=tab:»·,space:·,eol:¬,trail:·,nbsp:_
-set list
+set nolist
 let &colorcolumn=join(range(91,999),",")
 
 let mapleader=","
