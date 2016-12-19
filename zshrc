@@ -108,6 +108,7 @@ setopt no_global_rcs
 setopt HIST_IGNORE_SPACE
 
 export PATH=./node_modules/.bin:$PATH
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
 
 export NVM_DIR="${HOME}/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
