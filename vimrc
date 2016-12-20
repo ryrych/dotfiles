@@ -16,11 +16,9 @@ endif
 " http://stackoverflow.com/questions/5375240/a-more-useful-statusline-in-vim#5381514
 " %-0{minwid}.{maxwid}{item}
 set statusline=
-set statusline+=%<%f%(\ %y%m%r%) "file status (full path, modified, readonly flags)
+set statusline+=%<%f%(\ %y%) "file status (full path, modified, readonly flags)
 set statusline+=%(\ %{fugitive#statusline()}%) "git branch name
 set statusline+=\ %{rvm#statusline()} "e.g [ruby-2.3.0]
-set statusline+=%=%(\ %{CtrlSpaceStartWindowIndicator()}\ %) "vim-ctrlspace window status
-set statusline+=%-3.(%l,%c%V%)\ %P "document position (line & column number, % of progress)
 set statusline+=\ %{PencilMode()}
 
 set showtabline=0
