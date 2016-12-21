@@ -271,6 +271,7 @@ if has("nvim")
   tnoremap <Esc> <C-\><C-n>
 endif
 
+" todo: No need to run it everywhere?
 exe 'source ' g:vimrcWriting
 exe 'source ' g:vimrcAugroups
 
