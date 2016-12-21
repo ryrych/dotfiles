@@ -25,11 +25,11 @@ set showtabline=0
 set nostartofline
 set noautochdir
 set cursorline
-set textwidth=90
+set textwidth=120
 set clipboard=unnamed
 set listchars=tab:»·,space:·,eol:¬,trail:·,nbsp:_
 set nolist
-let &colorcolumn=join(range(91,999),",")
+let &colorcolumn=join(range(121,999),",")
 
 let mapleader=","
 noremap \ ,
