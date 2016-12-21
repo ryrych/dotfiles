@@ -293,6 +293,7 @@ nmap <C-i> <C-i>zz
 let twitvim_enable_python3 = 1
 let twitvim_browser_cmd = 'open'
 
+" Dont need that: https://til.hashrocket.com/posts/c95739ed9c-project-specific-vim-configuration
 if filereadable(expand("./vimrc.local"))
   source ./vimrc.local
 endif
