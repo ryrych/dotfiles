@@ -21,7 +21,9 @@ COMPLETION_WAITING_DOTS="true"
 # Custom plugins may be added to ~/.oh-my-zsh/custom/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git jira zsh-syntax-highlighting)
+
+# https://github.com/robbyrussell/oh-my-zsh/wiki/Plugins#git
+plugins=(git gitfast jira zsh-syntax-highlighting zsh-autosuggestions)
 # User configuration
 
 source $ZSH/oh-my-zsh.sh
