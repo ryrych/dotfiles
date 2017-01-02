@@ -105,6 +105,7 @@ alias rs="bundle exec rails server"
 
 alias ctags="`brew --prefix`/bin/ctags"
 alias dfi="cd ~/dotfiles"
+alias nv="nvim"
 
 setopt no_global_rcs
 setopt HIST_IGNORE_SPACE
