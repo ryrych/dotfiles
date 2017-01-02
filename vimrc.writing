@@ -45,7 +45,7 @@ function! SetupProtip()
     :exe '0read ' . l:protipTemplatePath
     :call SetupWriting()
     :Goyo
-    :!open http://localhost:4000
+    :!open http://localhost:4000/protips
 endfunction
 
 command SetupProtip :call SetupProtip()
