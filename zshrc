@@ -96,12 +96,12 @@ alias grlog="git reflog"
 
 # rails aliases
 
-alias rc="rails console"
+alias rc="bundle exec rails console"
 alias rdc="rake db:create"
 alias rdd="rake db:drop"
 alias rds="rake db:seed"
 alias rdm="rake db:migrate"
-alias rs="rails server"
+alias rs="bundle exec rails server"
 
 alias ctags="`brew --prefix`/bin/ctags"
 alias dfi="cd ~/dotfiles"
