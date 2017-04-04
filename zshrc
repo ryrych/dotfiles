@@ -122,5 +122,3 @@ export NVM_DIR="${HOME}/.nvm"
 source ~/.iterm2_shell_integration.`basename $SHELL`
 
 source $ZSH_CUSTOM/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
-
-export PATH="$PATH:$HOME/.rvm/bin" # Add RVM to PATH for scripting
