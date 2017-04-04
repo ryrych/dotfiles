@@ -122,3 +122,5 @@ export NVM_DIR="${HOME}/.nvm"
 source ~/.iterm2_shell_integration.`basename $SHELL`
 
 source $ZSH_CUSTOM/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
+
+eval "$(rbenv init -)"

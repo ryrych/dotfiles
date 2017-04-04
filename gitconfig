@@ -4,7 +4,7 @@
 [core]
   autocrlf = input
   editor = nvim -f
-	excludesfile = /Users/wojtek/.gitignore_global
+	excludesfile = /Users/wojtekryrych/.gitignore
 
 [github]
   user = wryrych
@@ -47,3 +47,4 @@
   oldHighlight = red bold 52
   newNormal = green bold
   newHighlight = green bold 22
+

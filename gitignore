@@ -1,3 +1,5 @@
 *.swp
 .DS_Store
 log
+vendor/bundle
+.DS_Store
