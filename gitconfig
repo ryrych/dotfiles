@@ -4,6 +4,7 @@
 [core]
   autocrlf = input
   editor = nvim -f
+	excludesfile = /Users/wojtek/.gitignore_global
 
 [github]
   user = wryrych

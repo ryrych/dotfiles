@@ -156,6 +156,13 @@ syntax enable
 set background=dark
 colorscheme PaperColor
 
+let iterm_profile = $ITERM_PROFILE
+if iterm_profile == "Dark"
+    set background=dark
+else
+    set background=light
+endif
+
 " Vim-Ruby
 let g:ruby_indent_access_modifier_style = "indent"
 
@@ -197,6 +204,7 @@ let g:EditorConfig_exec_path = "/usr/local/bin/EditorConfig"
 " CtrlSpace
 nnoremap <silent><Leader>p :CtrlSpaceGoUp<CR>
 nnoremap <silent><Leader>n :CtrlSpaceGoDown<CR>
+nmap <C-Space> :CtrlSpace h<CR>
 
 let g:CtrlSpaceFileEngine = "file_engine_darwin_amd64"
 let g:CtrlSpaceSymbols = { "NTM": " ⁺" }
@@ -279,3 +287,5 @@ nmap <C-i> <C-i>zz
 " Twitvim
 let twitvim_enable_python3 = 1
 let twitvim_browser_cmd = 'open'
+
+map <Plug> <Plug>Markdown_MoveToCurHeader

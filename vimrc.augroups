@@ -13,11 +13,11 @@ augroup Text
   au FileType markdown,text,gitcommit setlocal isk-=-
 augroup END
 
-augroup Pencil
-  au!
-  au FileType markdown,mkd call pencil#init({'wrap': 'soft'})
-  au FileType markdown,mkd call textobj#quote#init()
-  au FileType markdown,mkd call lexical#init()
+" augroup Pencil
+"   au!
+"   au FileType markdown,mkd call pencil#init({'wrap': 'soft'})
+"   au FileType markdown,mkd call textobj#quote#init()
+"   au FileType markdown,mkd call lexical#init()
 
   au FileType markdown,mkd map <silent> <leader>qc <Plug>ReplaceWithCurly
   au FileType markdown,mkd map <silent> <leader>qs <Plug>ReplaceWithStraight
