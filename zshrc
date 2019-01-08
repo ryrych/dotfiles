@@ -79,8 +79,6 @@ alias gle="git log --oneline --decorate"
 alias gll="git log --pretty=format:'%C(yellow)%h%Cred%d\\ %Creset%s%Cblue\\ [%cn]' --decorate --numstat"
 # git review master
 alias grevm="git log --oneline --decorate --no-merges origin/master --not master --author='^((?!wojtek).*)$'"
-# git versions behind
-alias gvb="git log --oneline --decorate $(git describe --abbrev=0 --tags)..head --merges"
 alias gtags="git log --tags --simplify-by-decoration --pretty='format:%ai %d'"
 
 alias gbcopy="git branch --move $(git_current_branch)-copy && git reset --hard origin/master"
