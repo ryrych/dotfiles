@@ -5,6 +5,8 @@ export EDITOR='nvim'
 export KEYTIMEOUT=1
 bindkey -v
 
+export HOMEBREW_GITHUB_API_TOKEN="3c34e50501fc8ecb324523fd8f66a1ba4348418f"
+
 # Set name of the theme to load.
 # Look in ~/.oh-my-zsh/themes/
 # Optionally, if you set this to "random", it'll load a random theme each
@@ -108,8 +110,9 @@ alias nv="nvim"
 setopt no_global_rcs
 setopt HIST_IGNORE_SPACE
 
+export PATH=~/.local/bin:$PATH
 export PATH=./node_modules/.bin:$PATH
-export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/latest/bin
+export PATH=$PATH:/Applications/Postgres.app/Contents/Versions/9.5
 
 export NVM_DIR="${HOME}/.nvm"
 [ -s "$NVM_DIR/nvm.sh" ] && . "$NVM_DIR/nvm.sh"  # This loads nvm
@@ -122,3 +125,4 @@ source ~/.iterm2_shell_integration.`basename $SHELL`
 source $ZSH_CUSTOM/plugins/zsh-syntax-highlighting/zsh-syntax-highlighting.zsh
 
 eval "$(rbenv init -)"
+[ -s "$NVM_DIR/bash_completion" ] && \. "$NVM_DIR/bash_completion"  # This loads nvm bash_completion

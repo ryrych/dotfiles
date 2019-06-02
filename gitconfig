@@ -3,7 +3,7 @@
 
 [core]
   autocrlf = input
-  editor = nvim -f
+  editor = nano
 	excludesfile = /Users/wojtekryrych/.gitignore
 
 [github]

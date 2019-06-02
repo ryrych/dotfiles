@@ -32,10 +32,10 @@ augroup END
 
 augroup Ruby
   au!
-  au FileType ruby,eruby,haml setlocal omnifunc=rubycomplete#Complete
-  au FileType ruby,eruby,haml let g:rubycomplete_buffer_loading = 1
-  au FileType ruby,eruby,haml let g:rubycomplete_rails = 1
-  au FileType ruby,eruby,haml let g:rubycomplete_classes_in_global = 1
+  " au FileType ruby,eruby,haml setlocal omnifunc=rubycomplete#Complete
+  " au FileType ruby,eruby,haml let g:rubycomplete_buffer_loading = 1
+  " au FileType ruby,eruby,haml let g:rubycomplete_rails = 1
+  " au FileType ruby,eruby,haml let g:rubycomplete_classes_in_global = 1
   au FileType ruby,eruby,haml setlocal tabstop=2 softtabstop=2 shiftwidth=2 expandtab
   au FileType ruby setlocal isk-=-
 augroup END
@@ -71,4 +71,4 @@ autocmd! BufWritePost * Neomake
 autocmd FileType typescript setlocal completeopt+=menu,preview
 
 " ruby augroup is not run
-au BufNewFile,BufRead *.html.haml set filetype=haml
+" au BufNewFile,BufRead *.html.haml set filetype=haml

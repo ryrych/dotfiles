@@ -27,7 +27,11 @@ command SetupWriting :call SetupWriting()
 
 function! SetupWritingPL()
     :setlocal spell spelllang=pl
-    :nnoremap <silent> <leader>qpl :call textobj#quote#init({ 'double':'„”', 'single':'‚’' })<cr>
+    setlocal nospell
+    setlocal wrap linebreak nolist
+    setlocal textwidth=0 wrapmargin=0
+    setlocal formatoptions-=t
+    :call textobj#quote#init({ 'double':'„”', 'single':'‚’' })
 endfunction
 
 command SetupWritingPL :call SetupWritingPL()

@@ -47,8 +47,7 @@ Plug 'tpope/vim-bundler'
 Plug 'tpope/vim-endwise'
 Plug 'tpope/vim-rails'
 Plug 'tpope/vim-rake'
-Plug 'tpope/vim-rvm'
-Plug 'vim-ruby/vim-ruby'
+" Plug 'vim-ruby/vim-ruby'
 
 " Text objects
 Plug 'kana/vim-textobj-entire'
@@ -105,6 +104,9 @@ Plug 'twitvim/twitvim'
 Plug 'janko-m/vim-test'
 Plug 'kassio/neoterm'
 Plug 'benekastah/neomake'
+Plug 'Shougo/deoplete.nvim', { 'do': ':UpdateRemotePlugins' }
+Plug 'mhartington/nvim-typescript'
+Plug 'HerringtonDarkholme/yats.vim'
 
 Plug 'Valloric/YouCompleteMe', { 'do': './install.py' }
 call plug#end()

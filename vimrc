@@ -18,7 +18,6 @@ endif
 set statusline=
 set statusline+=%<%f%(\ %y%) "file status (full path, modified, readonly flags)
 set statusline+=%(\ %{fugitive#statusline()}%) "git branch name
-set statusline+=\ %{rvm#statusline()} "e.g [ruby-2.3.0]
 set statusline+=\ %{PencilMode()}
 
 set showtabline=0
@@ -204,7 +203,7 @@ let g:EditorConfig_exec_path = "/usr/local/bin/EditorConfig"
 " CtrlSpace
 nnoremap <silent><Leader>p :CtrlSpaceGoUp<CR>
 nnoremap <silent><Leader>n :CtrlSpaceGoDown<CR>
-nmap <C-Space> :CtrlSpace h<CR>
+nnoremap <silent><C-Space> :CtrlSpace h<CR>
 
 let g:CtrlSpaceFileEngine = "file_engine_darwin_amd64"
 let g:CtrlSpaceSymbols = { "NTM": " ⁺" }
